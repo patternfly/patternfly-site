@@ -1,0 +1,26 @@
+/*
+Theme Name: Patternfly
+Theme URI: http://johntransue.net/bootstrap-3-wordpress-theme/
+Description: A simple responsive theme based on the Bootstrap framework. Includes multiple page templates, two different sidebars and a theme options panel.
+Version: 1
+Author: 320press, John Transue, Robb Hamilton
+License: GNU General Public License v2.0 & Apache License 2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/licenses/LICENSE-2.0
+*/
+
+
+/* layout */
+
+/* Admin Top Navigation fixes */
+
+body.admin-bar .navbar-fixed-top {
+  top: 46px;
+}
+
+@media (min-width: 783px) {
+  body.admin-bar .navbar-fixed-top {
+    top: 32px;
+  }
+}
+
+/* see less/bootstrap-custom.less */

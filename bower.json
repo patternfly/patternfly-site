@@ -1,0 +1,22 @@
+{
+  "name": "RCUE Wordpress theme",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rhamilto/rcue-site",
+  "authors": [
+    "Robb Hamilton <rhamilto@redhat.com>"
+  ],
+  "description": "Wordpress theme for RCUE web site",
+  "license": "Apache-2.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "library/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "rcue": "git@github.com:rhamilto/rcue.git#v0.6.0"
+  }
+}
