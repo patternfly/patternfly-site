@@ -17,6 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "patternfly": "/Users/rhamilto/Sites/patternfly"
+    "patternfly": "git://github.com/patternfly/patternfly"
   }
 }
