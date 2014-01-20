@@ -7819,11 +7819,131 @@ label {
 .navbar-nav > li > .dropdown-menu.infotip {
   margin-top: 10px;
 }
-@media (max-width: 767px) {
+.navbar-nav > li > .dropdown-menu.infotip {
+  margin-top: 10px;
+}
+@media (max-width: 991px) {
   .navbar-pf .navbar-nav .open .dropdown-menu.infotip {
     background-color: #fff !important;
     margin-top: 0;
   }
+}
+.infotip {
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+  min-width: 235px;
+  padding: 0;
+}
+.infotip .list-group {
+  margin: 0;
+  padding: 8px 0;
+}
+.infotip .list-group .list-group-item {
+  border: none;
+  margin: 0 15px 0 34px;
+  padding: 5px 0;
+}
+.infotip .list-group .list-group-item > .i {
+  color: #4d5258;
+  font-size: 13px;
+  left: -20px;
+  position: absolute;
+  top: 8px;
+}
+.infotip .list-group .list-group-item > a {
+  color: #4d5258;
+  line-height: 13px;
+}
+.infotip .list-group .list-group-item > .close {
+  float: right;
+}
+.infotip .footer {
+  background-color: #f5f5f5;
+  padding: 6px 15px;
+}
+.infotip .footer a:hover {
+  color: #0099d3;
+}
+.infotip .arrow,
+.infotip .arrow:after {
+  border-color: transparent;
+  border-style: solid;
+  display: block;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+.infotip .arrow {
+  border-width: 11px;
+}
+.infotip .arrow:after {
+  border-width: 10px;
+  content: "";
+}
+.infotip.bottom-right .arrow,
+.infotip.bottom .arrow {
+  border-bottom-color: #999999;
+  border-bottom-color: #bbbbbb;
+  border-top-width: 0;
+  left: 50%;
+  margin-left: -11px;
+  top: -11px;
+}
+.infotip.bottom-right .arrow:after,
+.infotip.bottom .arrow:after {
+  border-top-width: 0;
+  border-bottom-color: #ffffff;
+  content: " ";
+  margin-left: -10px;
+  top: 1px;
+}
+.infotip.bottom-right .arrow {
+  left: 80%;
+}
+.infotip.top .arrow {
+  border-bottom-width: 0;
+  border-top-color: #999999;
+  border-top-color: #bbbbbb;
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+}
+.infotip.top .arrow:after {
+  border-bottom-width: 0;
+  border-top-color: #f5f5f5;
+  bottom: 1px;
+  content: " ";
+  margin-left: -10px;
+}
+.infotip.right .arrow {
+  border-left-width: 0;
+  border-right-color: #999999;
+  border-right-color: #bbbbbb;
+  left: -11px;
+  margin-top: -11px;
+  top: 50%;
+}
+.infotip.right .arrow:after {
+  bottom: -10px;
+  border-left-width: 0;
+  border-right-color: #ffffff;
+  content: " ";
+  left: 1px;
+}
+.infotip.left .arrow {
+  border-left-color: #999999;
+  border-left-color: #bbbbbb;
+  border-right-width: 0;
+  margin-top: -11px;
+  right: -11px;
+  top: 50%;
+}
+.infotip.left .arrow:after {
+  border-left-color: #ffffff;
+  border-right-width: 0;
+  bottom: -10px;
+  content: " ";
+  right: 1px;
 }
 .infotip {
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
@@ -8218,7 +8338,7 @@ label {
   background-color: #454C53;
   color: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-pf .navbar-nav .active .navbar-persistent,
   .navbar-pf .navbar-nav .open .dropdown-menu {
     background-color: #3c434a !important;
@@ -8339,7 +8459,7 @@ label {
   font-family: "FontAwesome";
   font-weight: normal;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-pf .navbar-primary > li > .navbar-persistent > .dropdown-submenu > a:after {
     height: 10px;
     margin-left: 4px;
@@ -8376,7 +8496,7 @@ label {
   position: absolute;
   top: 10px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .navbar-pf .navbar-utility > li + li {
     border-top: 1px solid #53565B;
   }
@@ -9397,7 +9517,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 }
 .home .banner {
   color: #dbdada;
-  padding: 80px 500px 0 0;
+  padding: 54px 500px 0 0;
   position: relative;
 }
 .home .banner .description {
@@ -9840,7 +9960,7 @@ html #wpadminbar {
 }
 @media (max-width: 991px) {
   body.home {
-    background-position: 50% 32px;
+    background-position: 50% 70px;
   }
   header .navbar.navbar-default .dropdown-submenu > a:after {
     display: none;
@@ -9882,7 +10002,7 @@ html #wpadminbar {
     padding: 7px 15px;
   }
   .home .banner {
-    padding: 52px 400px 0 0;
+    padding: 44px 400px 0 0;
   }
   .home .banner .description {
     font-size: 15px;
@@ -9912,12 +10032,6 @@ html #wpadminbar {
   .home .banner + .row > .col-md-8 {
     border-right: 1px solid #d5d5d5;
     padding-right: 35px;
-  }
-  .home .banner + .row + hr + .row > .col-md-4 + .col-md-4 {
-    border-left: 1px solid #d5d5d5;
-  }
-  .home .banner + .row + hr + .row > .col-md-4 h2 {
-    margin-top: 0;
   }
   #widget-footer .widget ul {
     float: right;
