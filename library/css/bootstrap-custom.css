@@ -9550,10 +9550,6 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   margin: 0 0 20px;
   text-transform: none;
 }
-.home .banner + .row > .col-md-4 p,
-.home .banner + .row > .col-md-8 p {
-  margin-bottom: 20px;
-}
 .home .banner + .row > .col-md-4 {
   padding-bottom: 35px;
 }
@@ -9610,6 +9606,9 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 }
 hr {
   border-top-color: #D5D5D5;
+}
+html #wpadminbar {
+  z-index: 10000 !important;
 }
 .incsub_wiki #btn_save {
   background-color: #eee;
@@ -9706,6 +9705,215 @@ hr {
 }
 .indent {
   margin-left: 30px;
+}
+.login {
+  background: #1d2226 url("../components/patternfly/dist/img/bg-login.jpg") repeat-x 45% 0 !important;
+  background-size: auto !important;
+  color: #fff;
+  height: 100%;
+}
+@media (min-width: 992px) {
+  .login {
+    background-size: 100% auto !important;
+  }
+}
+.login form {
+  background-color: #252A2E;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 30px 20px 60px 20px;
+  margin: 25px 0 0;
+}
+@media (min-width: 992px) {
+  .login form {
+    padding-left: 80px;
+  }
+}
+.login form input[type=submit] {
+  border-radius: 1px;
+  background-color: #189ad1;
+  background-image: -webkit-linear-gradient(top, #1cace8 0%, #1998cc 100%);
+  background-image: linear-gradient(to bottom, #1cace8 0%, #1998cc 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1cace8', endColorstr='#ff1998cc', GradientType=0);
+  border-color: #267da1;
+  color: #ffffff;
+}
+.login form input[type=submit]:hover,
+.login form input[type=submit]:focus,
+.login form input[type=submit]:active,
+.login form input[type=submit].active,
+.open .dropdown-toggle.login form input[type=submit] {
+  background-color: #189ad1;
+  background-image: none;
+  border-color: #267da1;
+  color: #ffffff;
+}
+.login form input[type=submit]:active,
+.login form input[type=submit].active,
+.open .dropdown-toggle.login form input[type=submit] {
+  background-image: none;
+}
+.login form input[type=submit].disabled,
+.login form input[type=submit][disabled],
+fieldset[disabled] .login form input[type=submit],
+.login form input[type=submit].disabled:hover,
+.login form input[type=submit][disabled]:hover,
+fieldset[disabled] .login form input[type=submit]:hover,
+.login form input[type=submit].disabled:focus,
+.login form input[type=submit][disabled]:focus,
+fieldset[disabled] .login form input[type=submit]:focus,
+.login form input[type=submit].disabled:active,
+.login form input[type=submit][disabled]:active,
+fieldset[disabled] .login form input[type=submit]:active,
+.login form input[type=submit].disabled.active,
+.login form input[type=submit][disabled].active,
+fieldset[disabled] .login form input[type=submit].active {
+  background-color: #189ad1;
+  border-color: #267da1;
+}
+.login form input[type=submit]:active {
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.login form input[type=submit]:focus {
+  outline: none;
+}
+.login form input[type=submit],
+.login form input[type=submit]:hover {
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+.login form input[type=checkbox] {
+  margin: -3px 4px 0 0;
+}
+.login form input[type=password],
+.login form input[type=text] {
+  background-color: #ffffff;
+  background-image: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  border: 1px solid #bababa;
+  border-radius: 1px;
+  color: #333333;
+  display: block;
+  font-size: 11px;
+  height: 26px;
+  line-height: 1.81818181;
+  padding: 2px 6px;
+  vertical-align: middle;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+@media (min-width: 992px) {
+  .login form input[type=password],
+  .login form input[type=text] {
+    width: 300px;
+  }
+}
+.login form input[type=password]:hover,
+.login form input[type=text]:hover {
+  border-color: #7BB2DD;
+}
+.login form label {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+}
+.login form .forgetmenot label {
+  font-size: 11px;
+}
+.login h1 {
+  padding-top: 20px;
+}
+@media (min-width: 992px) {
+  .login h1 {
+    margin-left: 80px;
+    text-align: left;
+  }
+}
+.login h1 a {
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  height: auto;
+  margin: 0;
+  text-indent: 0;
+  width: auto;
+}
+.login h1 a:hover {
+  color: #fff;
+}
+.login #login {
+  padding: 0;
+  width: auto;
+}
+@media (min-width: 992px) {
+  .login #login {
+    bottom: 13%;
+    position: absolute;
+    width: 100%;
+  }
+}
+.login #login #backtoblog {
+  display: none;
+}
+.login #login form p {
+  font-size: 11px;
+  font-weight: normal;
+}
+@media (min-width: 992px) {
+  .login #login form p.submit {
+    width: 300px;
+  }
+}
+.login #login_error,
+.login .message {
+  background: none;
+  border-left: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #FF3F3F;
+  margin: 10px 20px -10px;
+  padding: 0;
+}
+@media (max-width: 991px) {
+  .login #login_error,
+  .login .message {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .login #login_error,
+  .login .message {
+    margin-left: 80px;
+  }
+}
+.login .message {
+  color: #ddd;
+}
+.login .message + #login_error {
+  margin-top: 20px;
+}
+.login #nav {
+  font-size: 11px;
+  margin: -50px 0 0 20px;
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .login #nav {
+    margin-left: 80px;
+  }
+}
+.login #nav a {
+  color: #0099d3;
+}
+.login #nav a:hover {
+  color: #00618a;
+  text-decoration: underline;
 }
 .page-header {
   border-bottom: 0;
@@ -9824,6 +10032,26 @@ pre.prettyprint {
   margin: 0;
   padding: 0;
 }
+#sidebar2 .advanced_recent_posts_widget .post-date {
+  color: #999999;
+  display: inline-block;
+  float: right;
+  font-size: 10px;
+  font-style: normal;
+}
+#sidebar2 .advanced_recent_posts_widget .post-entry {
+  margin: 3px 0 0;
+  padding: 0;
+}
+#sidebar2 .advanced_recent_posts_widget .post-title {
+  font-size: 13px;
+  font-weight: 400;
+}
+#sidebar2 .advanced_recent_posts_widget ul li {
+  border-bottom: 0;
+  margin: 0 0 12px;
+  padding: 0;
+}
 strong {
   font-weight: 600;
 }
@@ -9867,9 +10095,6 @@ th {
 }
 #widget-footer .widget ul li + li {
   margin-left: 15px;
-}
-html #wpadminbar {
-  z-index: 10000 !important;
 }
 /* Responsive layouts */
 @media (min-width: 1200px) {

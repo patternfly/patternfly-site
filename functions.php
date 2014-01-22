@@ -108,19 +108,29 @@ function bones_register_sidebars() {
       'description' => 'Used on every page BUT the homepage page template.',
       'before_widget' => '<div id="%1$s" class="widget %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
 
     ));
     
     register_sidebar(array(
       'id' => 'sidebar2',
-      'name' => 'Homepage Sidebar',
+      'name' => 'Homepage Left Sidebar',
       'description' => 'Used only on the homepage page template.',
       'before_widget' => '<div id="%1$s" class="widget  %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
+    ));
+
+    register_sidebar(array(
+      'id' => 'sidebar3',
+      'name' => 'Homepage Right Sidebar',
+      'description' => 'Used only on the homepage page template.',
+      'before_widget' => '<div id="%1$s" class="widget  %2$s">',
+      'after_widget' => '</div>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
     ));
     
     register_sidebar(array(
@@ -128,8 +138,8 @@ function bones_register_sidebars() {
       'name' => 'Footer 1',
       'before_widget' => '<div id="%1$s" class="widget col-sm-4 col-md-4 %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
     ));
 
     register_sidebar(array(
@@ -137,8 +147,8 @@ function bones_register_sidebars() {
       'name' => 'Footer 2',
       'before_widget' => '<div id="%1$s" class="widget col-sm-4 col-md-4 %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
     ));
 
     register_sidebar(array(
@@ -146,8 +156,8 @@ function bones_register_sidebars() {
       'name' => 'Footer 3',
       'before_widget' => '<div id="%1$s" class="widget col-sm-4 col-md-4 %2$s">',
       'after_widget' => '</div>',
-      'before_title' => '<h4 class="widgettitle">',
-      'after_title' => '</h4>',
+      'before_title' => '<h2 class="widgettitle">',
+      'after_title' => '</h2>',
     ));
     
     
@@ -597,14 +607,14 @@ if( !function_exists( "theme_js" ) ) {
       array('jquery'), 
       '1.2' );
 
-    wp_register_script(  'rcue', 
-      get_template_directory_uri() . '/library/js/rcue.js', 
+    wp_register_script(  'pf', 
+      get_template_directory_uri() . '/library/js/pf.js', 
       array('jquery'), 
       '1.2' );
 
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('wpbs-scripts');
-    wp_enqueue_script('rcue');
+    wp_enqueue_script('pf');
     
   }
 }
@@ -888,5 +898,10 @@ function bootstrapwp_breadcrumbs()
     }
 }
 
+// Add stylesheet to login
+function my_login_stylesheet() { ?>
+    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/library/css/bootstrap-custom.min.css'; ?>" type="text/css" media="all" />
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
 ?>

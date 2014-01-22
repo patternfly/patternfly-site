@@ -323,9 +323,6 @@ header {
         margin: 0 0 20px;
         text-transform: none;
       }
-      p {
-        margin-bottom: 20px;
-      }
     }
     > .col-md-4 {
       padding-bottom: 35px;
@@ -390,6 +387,10 @@ header {
 
 hr {
   border-top-color: #D5D5D5;
+}
+
+html #wpadminbar {
+  z-index: 10000 !important;
 }
 
 .incsub_wiki {
@@ -489,6 +490,148 @@ hr {
 
 .indent {
   margin-left: 30px;
+}
+
+.login {
+  background: #1D2226 url("@{img-path}/bg-login.jpg") repeat-x 45% 0 !important;
+  background-size: auto !important;
+  color: #fff;
+  height: 100%;
+  @media (min-width: @grid-float-breakpoint) {
+    background-size: 100% auto !important;
+  }
+  form {
+    background-color: #252A2E;
+    background-color: rgba(0, 0, 0, 0.3);
+    .box-shadow(none);
+    padding: 30px 20px 60px 20px;
+    margin: 25px 0 0;
+    @media (min-width: @grid-float-breakpoint) {
+      padding-left: 80px;
+    }
+    input[type=submit] {
+      border-radius: @border-radius-base;
+      .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-bg-img-start; @btn-primary-bg-img-stop; @btn-primary-border);
+      &:active {
+        .box-shadow(inset 0 2px 8px rgba(0,0,0,.2));
+      }
+      &:focus {
+        outline: none;
+      }
+      &, &:hover {
+        .box-shadow(0 2px 3px rgba(0,0,0,.1));
+      }
+    }
+    input[type=checkbox] {
+      margin: -3px 4px 0 0;
+    }
+    input[type=password], input[type=text] {
+      background-color: @input-bg;
+      background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+      .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+      border: 1px solid @input-border;
+      border-radius: @input-border-radius;
+      color: @input-color;
+      display: block;
+      font-size: @font-size-base;
+      height: @input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+      line-height: @line-height-base;
+      padding: @padding-base-vertical @padding-base-horizontal;
+      vertical-align: middle;
+      .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
+      @media (min-width: @grid-float-breakpoint) { 
+        width: 300px;
+      }
+      &:hover {
+        border-color: #7BB2DD;
+      }
+    }
+    label {
+      color: #fff;
+      font-size: @font-size-base + 1;
+      font-weight: 400;
+      width: 100%;
+    }
+    .forgetmenot label {
+      font-size: @font-size-base;
+    }
+  }
+  h1 { 
+    padding-top: 20px;
+    @media (min-width: @grid-float-breakpoint) {
+      margin-left: 80px;
+      text-align: left;
+    }
+    a {
+      background: none;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 600;
+      height: auto;
+      margin: 0;
+      text-indent: 0;
+      width: auto;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  #login {
+    padding: 0;
+    width: auto;
+    @media (min-width: @grid-float-breakpoint) { 
+      bottom: 13%;
+      position: absolute;
+      width: 100%;
+    }
+    #backtoblog {
+      display: none;
+    }
+    form p {
+      font-size: @font-size-base;
+      font-weight: normal;
+      &.submit {
+        @media (min-width: @grid-float-breakpoint) { 
+          width: 300px;
+        }
+      }
+    }
+  }
+  #login_error, .message {
+    background: none;
+    border-left: 0;
+    .box-shadow(none);
+    color: #FF3F3F;
+    margin: 10px 20px -10px;
+    padding: 0;
+    @media (max-width: @grid-float-breakpoint-max) {
+      text-align: center;
+    }
+    @media (min-width: @grid-float-breakpoint) {
+      margin-left: 80px;
+    }
+  }
+  .message {
+    color: #ddd;
+    + #login_error {
+      margin-top: 20px;
+    }
+  }
+  #nav {
+    font-size: @font-size-base;
+    margin: -50px 0 0 20px;
+    padding: 0;
+    @media (min-width: @grid-float-breakpoint) {
+      margin-left: 80px;
+    }
+    a {
+      color: @link-color;
+      &:hover {
+        color: @link-hover-color;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .page-header {
@@ -611,6 +754,29 @@ pre.prettyprint {
   }
 }
 
+#sidebar2 .advanced_recent_posts_widget {
+  .post-date {
+    color: @gray-light;
+    display: inline-block;
+    float: right;
+    font-size: @font-size-small;
+    font-style: normal;
+  }
+  .post-entry {
+    margin: 3px 0 0;
+    padding: 0;
+  }
+  .post-title {
+    font-size: @font-size-large;
+    font-weight: 400;
+  }
+  ul li {
+    border-bottom: 0;
+    margin: 0 0 12px;
+    padding: 0;
+  }
+}
+
 strong {
   font-weight: 600;
 }
@@ -657,10 +823,6 @@ th {
       }
     }
   }
-}
-
-html #wpadminbar {
-  z-index: 10000 !important;
 }
 
 /* Responsive layouts */
