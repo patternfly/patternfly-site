@@ -39,11 +39,6 @@
   }
 }
 
-.aj-hidden + h3, .examples + h3, h2 + h3 {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
 body {
   font-size: 13px;
   padding-top: 0 !important;
@@ -646,6 +641,10 @@ pre.prettyprint {
   padding: 0 !important;
 }
 
+.reference-markup {
+  margin-top: 20px;
+}
+
 #respond {
   margin: 0 0 15px 0;
   h3 {
@@ -659,15 +658,24 @@ pre.prettyprint {
 }
 
 .row .section {
-  border-top: 1px solid #dfdfdf;
-  margin-top: 30px;
-  padding-top: 30px;
+  padding-top: 100px;
   position: relative;
+  &:before {
+    background: #dfdfdf;
+    content: '';
+    height: 1px;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+  }
   > *:first-child {
     margin-top: 0;
   }
   h2 + p {
     margin-top: -12px;
+  }
+  .pagination, .pager {
+    margin: 0;
   }
 }
 
@@ -686,9 +694,6 @@ pre.prettyprint {
     &.affix-bottom {
       position: absolute;
     }
-    &.affix-top {
-      position: relative;
-    }
     .current-menu-item > a, .current-menu-item > a:hover {
       color: #333;
     }
@@ -702,7 +707,7 @@ pre.prettyprint {
       }
       > .sub-menu {
         font-size: 13px;
-        .active, .current-menu-item {
+        > .active, .current-menu-item {
           position: relative;
           &:after {
             content: @fa-var-angle-left;

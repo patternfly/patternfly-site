@@ -9268,12 +9268,6 @@ fieldset[disabled] .pagination > li > span.active {
 .aj-collapse.open:hover:after {
   border-top-color: #00618a;
 }
-.aj-hidden + h3,
-.examples + h3,
-h2 + h3 {
-  margin-bottom: 0;
-  margin-top: 0;
-}
 body {
   font-size: 13px;
   padding-top: 0 !important;
@@ -9925,6 +9919,9 @@ pre.prettyprint {
   border: 0 !important;
   padding: 0 !important;
 }
+.reference-markup {
+  margin-top: 20px;
+}
 #respond {
   margin: 0 0 15px 0;
 }
@@ -9937,16 +9934,26 @@ pre.prettyprint {
   width: 100%;
 }
 .row .section {
-  border-top: 1px solid #dfdfdf;
-  margin-top: 30px;
-  padding-top: 30px;
+  padding-top: 100px;
   position: relative;
+}
+.row .section:before {
+  background: #dfdfdf;
+  content: '';
+  height: 1px;
+  position: absolute;
+  top: 50px;
+  width: 100%;
 }
 .row .section > *:first-child {
   margin-top: 0;
 }
 .row .section h2 + p {
   margin-top: -12px;
+}
+.row .section .pagination,
+.row .section .pager {
+  margin: 0;
 }
 .sidebar .menu {
   background: #fff;
@@ -9962,9 +9969,6 @@ pre.prettyprint {
 }
 .sidebar .menu.affix-bottom {
   position: absolute;
-}
-.sidebar .menu.affix-top {
-  position: relative;
 }
 .sidebar .menu .current-menu-item > a,
 .sidebar .menu .current-menu-item > a:hover {
@@ -9984,11 +9988,11 @@ pre.prettyprint {
 .sidebar .menu > li > .sub-menu {
   font-size: 13px;
 }
-.sidebar .menu > li > .sub-menu .active,
+.sidebar .menu > li > .sub-menu > .active,
 .sidebar .menu > li > .sub-menu .current-menu-item {
   position: relative;
 }
-.sidebar .menu > li > .sub-menu .active:after,
+.sidebar .menu > li > .sub-menu > .active:after,
 .sidebar .menu > li > .sub-menu .current-menu-item:after {
   content: "\f104";
   font-family: "FontAwesome";
@@ -9998,7 +10002,7 @@ pre.prettyprint {
   top: 6px;
   width: 0;
 }
-.sidebar .menu > li > .sub-menu .active > a,
+.sidebar .menu > li > .sub-menu > .active > a,
 .sidebar .menu > li > .sub-menu .current-menu-item > a {
   color: #333;
 }
