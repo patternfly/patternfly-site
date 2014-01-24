@@ -9909,6 +9909,10 @@ fieldset[disabled] .login form input[type=submit].active {
   color: #00618a;
   text-decoration: underline;
 }
+.meta {
+  color: #999999;
+  font-size: 10px;
+}
 .page-header {
   border-bottom: 0;
   margin: 0;
