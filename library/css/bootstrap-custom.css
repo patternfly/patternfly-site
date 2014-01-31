@@ -9578,6 +9578,9 @@ html #wpadminbar {
 .incsub_wiki .incsub_wiki_meta_box {
   margin-bottom: 10px;
 }
+.incsub_wiki .incsub_wiki-subscribe {
+  margin-top: 20px;
+}
 .incsub_wiki .incsub_wiki_tabs {
   margin-bottom: 20px;
 }
@@ -9603,6 +9606,13 @@ html #wpadminbar {
 .incsub_wiki .quicktags-toolbar,
 .incsub_wiki .wp_themeSkin tr.mceFirst td.mceToolbar {
   background-color: transparent;
+}
+.incsub_wiki .sidebar #menu-item-1425 {
+  display: block;
+}
+.incsub_wiki .sidebar #menu-item-1425 > *:first-child {
+  color: #333;
+  font-weight: 600;
 }
 .incsub_wiki .tmce-active .switch-tmce,
 .incsub_wiki .html-active .switch-html {
