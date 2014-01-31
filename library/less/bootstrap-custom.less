@@ -192,11 +192,22 @@ header {
       line-height: 0;
       margin-bottom: 15px;
       margin-top: 15px;
+      position: relative;
       text-indent: -9999px;
       width: 235px;
+      &:hover:after {
+        background: #1F89C7;
+        content: '';
+        height: 1px;
+        left: 71px;
+        position: absolute;
+        top: 33px;
+        width: 163px;
+      }
       .ie8 & {
         background-image: url(../img/patternfly.png);
       }
+
     }
     .navbar-collapse {
       border-top-color: transparent;
