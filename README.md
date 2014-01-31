@@ -1,7 +1,4 @@
-# PatternFly theme based on [WP-Bootstrap](https://github.com/320press/wordpress-bootstrap/}
-
-Bootstrap (http://twitter.github.io/bootstrap) in Wordpress theme form. Using Eddie Machado's Bones for a starting point (https://github.com/eddiemachado/bones). 
-
+# PatternFly theme based on [WP-Bootstrap](https://github.com/320press/wordpress-bootstrap/)
 
 ## Development
 
