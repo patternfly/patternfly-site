@@ -9217,7 +9217,13 @@ body.home {
   height: auto;
   max-width: 100%;
 }
-#comments h3:first-child {
+#comments {
+  margin-top: 20px;
+}
+.incsub_wiki #comments {
+  margin-top: 0;
+}
+.incsub_wiki #comments h3:first-child {
   margin-top: -5px;
 }
 #comment-form-elements {

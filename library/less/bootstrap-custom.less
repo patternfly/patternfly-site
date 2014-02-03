@@ -57,8 +57,14 @@ body {
   max-width: 100%;
 }
 
-#comments h3:first-child {
-  margin-top: -5px;
+#comments {
+  margin-top: 20px;
+  .incsub_wiki & {
+    margin-top: 0;
+    h3:first-child {
+      margin-top: -5px;
+    }
+  }
 }
 
 #comment-form-elements {
