@@ -29,4 +29,7 @@ jQuery( document ).ready(function() {
       }
     }
   });
+  jQuery(".pf-example a").click(function( event ) {
+    event.preventDefault();
+  });
 });
