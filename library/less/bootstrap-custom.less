@@ -213,7 +213,6 @@ header {
       .ie8 & {
         background-image: url(../img/patternfly.png);
       }
-
     }
     .navbar-collapse {
       border-top-color: transparent;
@@ -522,8 +521,8 @@ html #wpadminbar {
     background-size: 100% auto !important;
   }
   form {
-    background-color: #181818;
-    background-color: rgba(255, 255, 255, 0.055);
+    background-color: @login-container-bg-color;
+    background-color: @login-container-bg-color-rgba;
     .box-shadow(none);
     padding: 30px 20px 60px 20px;
     margin: 25px 0 0;
@@ -587,6 +586,9 @@ html #wpadminbar {
       height: 40px;
       margin: 0 auto;
       width: 235px !important;
+      .ie8 & {
+        background-image: url(../img/patternfly.png);
+      }
       @media (min-width: @grid-float-breakpoint) {
         margin-left: 0;
       }
@@ -643,7 +645,7 @@ html #wpadminbar {
     a {
       color: @link-color;
       &:hover {
-        color: @link-hover-color;
+        color: lighten(@link-color, 20%);
         text-decoration: underline;
       }
     }
@@ -852,9 +854,6 @@ th {
   }
   .widget {
     padding-top: 30px;
-    &#text-3 {
-      padding-top: 0;
-    }
     ul {
       list-style: none;
       margin: 0;
@@ -1062,18 +1061,12 @@ th {
   }
 }
 
-@media (max-width: 600px) {
-  header + .container {
-    padding-top: 0;
-  }
-  .navbar-fixed-top {
-    position: static;
-  }
-}
-
 @media (max-width: @screen-xs-max) {
   body.home {
     background: none;
+  }
+  header + .container {
+    padding-top: 0;
   }
   .home .banner {
     background: url(/wp-content/uploads/2014/01/bg-banner.jpg) no-repeat 50% -1px;
@@ -1094,6 +1087,9 @@ th {
     .pull-right {
       display: none;
     }
+  }
+  .navbar-fixed-top {
+    position: static;
   }
   .sidebar .menu {
     &.affix, &.affix-bottom {

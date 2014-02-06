@@ -9791,6 +9791,9 @@ fieldset[disabled] .login form input[type=submit].active {
   margin: 0 auto;
   width: 235px !important;
 }
+.ie8 .login h1 a {
+  background-image: url(../img/patternfly.png);
+}
 @media (min-width: 992px) {
   .login h1 a {
     margin-left: 0;
@@ -9861,7 +9864,7 @@ fieldset[disabled] .login form input[type=submit].active {
   color: #0099d3;
 }
 .login #nav a:hover {
-  color: #00618a;
+  color: #3ac9ff;
   text-decoration: underline;
 }
 .meta {
@@ -10061,9 +10064,6 @@ th {
 #widget-footer .widget {
   padding-top: 30px;
 }
-#widget-footer .widget#text-3 {
-  padding-top: 0;
-}
 #widget-footer .widget ul {
   list-style: none;
   margin: 0;
@@ -10242,17 +10242,12 @@ th {
     float: right;
   }
 }
-@media (max-width: 600px) {
-  header + .container {
-    padding-top: 0;
-  }
-  .navbar-fixed-top {
-    position: static;
-  }
-}
 @media (max-width: 767px) {
   body.home {
     background: none;
+  }
+  header + .container {
+    padding-top: 0;
   }
   .home .banner {
     background: url(/wp-content/uploads/2014/01/bg-banner.jpg) no-repeat 50% -1px;
@@ -10273,6 +10268,9 @@ th {
   }
   .home .banner .pull-right {
     display: none;
+  }
+  .navbar-fixed-top {
+    position: static;
   }
   .sidebar .menu.affix,
   .sidebar .menu.affix-bottom {
