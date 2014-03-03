@@ -1373,14 +1373,14 @@ th {
 .table > thead > tr > td,
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
-  padding: 8px;
+  padding: 10px;
   line-height: 1.81818181;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #d1d1d1;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dddddd;
+  border-bottom: 2px solid #d1d1d1;
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -1391,7 +1391,7 @@ th {
   border-top: 0;
 }
 .table > tbody + tbody {
-  border-top: 2px solid #dddddd;
+  border-top: 2px solid #d1d1d1;
 }
 .table .table {
   background-color: #ffffff;
@@ -1405,7 +1405,7 @@ th {
   padding: 5px;
 }
 .table-bordered {
-  border: 1px solid #dddddd;
+  border: 1px solid #d1d1d1;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -1413,7 +1413,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #dddddd;
+  border: 1px solid #d1d1d1;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -1421,11 +1421,11 @@ th {
 }
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9;
+  background-color: #f5f5f5;
 }
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-  background-color: #f5f5f5;
+  background-color: #d5ecf9;
 }
 table col[class*="col-"] {
   position: static;
@@ -1446,12 +1446,12 @@ table th[class*="col-"] {
 .table > thead > .active > th,
 .table > tbody > .active > th,
 .table > tfoot > .active > th {
-  background-color: #f5f5f5;
+  background-color: #d5ecf9;
 }
 .table-hover > tbody > tr > .active:hover,
 .table-hover > tbody > .active:hover > td,
 .table-hover > tbody > .active:hover > th {
-  background-color: #e8e8e8;
+  background-color: #bfe2f6;
 }
 .table > thead > tr > .success,
 .table > tbody > tr > .success,
@@ -1508,7 +1508,7 @@ table th[class*="col-"] {
     overflow-y: hidden;
     overflow-x: scroll;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid #dddddd;
+    border: 1px solid #d1d1d1;
     -webkit-overflow-scrolling: touch;
   }
   .table-responsive > .table {
@@ -4711,7 +4711,7 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 .panel > .panel-body + .table,
 .panel > .panel-body + .table-responsive {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #d1d1d1;
 }
 .panel > .table > tbody:first-child th,
 .panel > .table > tbody:first-child td {
@@ -7804,6 +7804,154 @@ fieldset[disabled] .btn-primary.active {
 .ie8 .input-group-pf .input-group-btn .dropdown-toggle {
   margin-left: -1px;
 }
+.dataTables_header {
+  background-color: #f6f6f6;
+  border: 1px solid #d1d1d1;
+  border-bottom: none;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+}
+.dataTables_header .dataTables_filter {
+  position: absolute;
+}
+.dataTables_header .dataTables_filter input {
+  border: 1px solid #bbb;
+  height: 24px;
+}
+@media (max-width: 767px) {
+  .dataTables_header .dataTables_filter input {
+    width: 100px;
+  }
+}
+.dataTables_header .dataTables_info {
+  padding: 2px 0;
+}
+@media (max-width: 480px) {
+  .dataTables_header .dataTables_info {
+    text-align: right;
+  }
+}
+.dataTables_header .dataTables_info b {
+  font-weight: bold;
+}
+.dataTables_footer {
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-top: none;
+  overflow: hidden;
+}
+.dataTables_paginate {
+  background: #fafafa;
+  float: right;
+  margin: 0;
+}
+.dataTables_paginate .pagination {
+  float: left;
+  margin: 0;
+}
+.dataTables_paginate .pagination > li > span {
+  border-color: #ffffff #e1e1e1 #f4f4f4;
+  border-width: 0 1px;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 0;
+  text-align: center;
+  width: 31px;
+}
+.dataTables_paginate .pagination > li > span:hover,
+.dataTables_paginate .pagination > li > span:focus {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.dataTables_paginate .pagination > li.last > span {
+  border-right: none;
+}
+.dataTables_paginate .pagination > li.disabled > span {
+  background: #f5f5f5;
+  border-left-color: #ececec;
+  border-right-color: #ececec;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.dataTables_paginate .pagination-input {
+  float: left;
+  font-size: 11px;
+  line-height: 1em;
+  padding: 4px 15px 0;
+  text-align: right;
+}
+.dataTables_paginate .pagination-input .paginate_input {
+  border: 1px solid #d3d3d3;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-size: 11px;
+  font-weight: 600;
+  height: 19px;
+  margin-right: 8px;
+  padding-right: 3px;
+  text-align: right;
+  width: 30px;
+}
+.dataTables_paginate .pagination-input .paginate_of {
+  position: relative;
+}
+.dataTables_paginate .pagination-input .paginate_of b {
+  margin-left: 3px;
+}
+@media (max-width: 767px) {
+  .dataTables_wrapper .table-responsive {
+    margin-bottom: 0;
+  }
+}
+table.datatable {
+  margin-bottom: 0;
+  max-width: none !important;
+}
+table.datatable thead .sorting,
+table.datatable thead .sorting_asc,
+table.datatable thead .sorting_desc,
+table.datatable thead .sorting_asc_disabled,
+table.datatable thead .sorting_desc_disabled {
+  cursor: pointer;
+  *cursor: hand;
+}
+table.datatable thead .sorting_asc,
+table.datatable thead .sorting_desc {
+  border: 0;
+  color: #0099d3 !important;
+  display: block;
+  position: relative;
+}
+table.datatable thead .sorting_asc:after,
+table.datatable thead .sorting_desc:after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  font-size: 9px;
+  font-weight: normal;
+  height: 8px;
+  left: 7px;
+  line-height: 11px;
+  position: relative;
+  top: 2px;
+  vertical-align: baseline;
+  width: 11px;
+}
+table.datatable thead .sorting_asc:before,
+table.datatable thead .sorting_desc:before {
+  background: #0099d3;
+  content: '';
+  height: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+table.datatable thead .sorting_asc:after {
+  content: "\f106";
+  top: -3px;
+}
+table.datatable th:active {
+  outline: none;
+}
 .caret {
   font-family: "FontAwesome";
   font-weight: normal;
@@ -9314,6 +9462,65 @@ fieldset[disabled] .pagination > li > span.active {
 .nav-tabs-pf .open > a:hover,
 .nav-tabs-pf .open > a:focus {
   background-color: transparent;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 2px 10px 3px;
+}
+.table > thead > tr > th > a:hover,
+.table > tbody > tr > th > a:hover,
+.table > tfoot > tr > th > a:hover,
+.table > thead > tr > td > a:hover,
+.table > tbody > tr > td > a:hover,
+.table > tfoot > tr > td > a:hover {
+  text-decoration: none;
+}
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+}
+.table > thead {
+  background-clip: padding-box;
+  background-color: #f9f9f9;
+  background-image: -webkit-linear-gradient(top, #fafafa 0%, #ededed 100%);
+  background-image: linear-gradient(to bottom, #fafafa 0%, #ededed 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffededed', GradientType=0);
+}
+.table-bordered {
+  border: 1px solid #d1d1d1;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #d1d1d1;
+}
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 1px;
+}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: transparent;
+}
+.table-striped > tbody > tr:nth-child(even) > td,
+.table-striped > tbody > tr:nth-child(even) > th {
+  background-color: #f5f5f5;
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th {
+  background-color: #d5ecf9;
+  border-bottom-color: #a7cadf;
 }
 h1,
 .h1,
