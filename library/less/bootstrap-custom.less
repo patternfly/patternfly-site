@@ -40,7 +40,6 @@
 }
 
 body {
-  font-size: @font-size-large;
   padding-top: 0 !important;
    &.home{
     background: url(/wp-content/uploads/2014/01/bg-banner.jpg) repeat-x 50% 69px;
@@ -187,25 +186,26 @@ header {
     -webkit-border-radius: 0;
     border-radius: 0;
     border-top: 1px solid #1688c0;
+    font-size: @font-size-base + 1;
     margin-bottom: 0;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false) !important;
     .form-group {
       display: block;
     }
     .navbar-brand {
-      background: url(../img/patternfly.svg) no-repeat 15px 50%;
+      background: url(../img/patternfly.svg) no-repeat 20px 50%;
       height: 40px;
       line-height: 0;
       margin-bottom: 15px;
       margin-top: 15px;
       position: relative;
       text-indent: -9999px;
-      width: 235px;
+      width: 240px;
       &:hover:after {
         background: #1F89C7;
         content: '';
         height: 1px;
-        left: 71px;
+        left: 76px;
         position: absolute;
         top: 33px;
         width: 163px;
@@ -238,7 +238,7 @@ header {
         content: @fa-var-search;
         font: 14px/1 @icon-font-name-fa;
         position: absolute;
-        left: 18px;
+        left: 24px;
         top: 4px;
       }
       &:hover:before {
@@ -306,7 +306,7 @@ header {
 
 .home .banner {
   color: #dbdada;
-  padding: 52px 500px 0 0;
+  padding: 53px 500px 0 0;
   position: relative;
   .description {
     font-size: 18px;
@@ -813,7 +813,6 @@ pre.prettyprint {
     padding: 0;
   }
   .post-title {
-    font-size: @font-size-large;
     font-weight: 400;
   }
   ul li {
@@ -847,7 +846,7 @@ th {
     padding-top: 0;
   }
   hr {
-    margin: 0 15px; 
+    margin: 0 20px; 
   }
   p {
     margin-bottom: 0;
@@ -875,8 +874,10 @@ th {
     .navbar-collapse .navbar-form {
       margin-bottom: 24px;
       margin-top: 22px;
+      padding-left: 10px;
       padding-right: 0;
       &:before {
+        left: 14px;
         top: 6px;
       }
       .form-control {
@@ -993,12 +994,12 @@ th {
         }
       }
       > a {
-        padding: 7px 15px;
+        padding: 7px 20px;
       }
     }
   }
   .home .banner {
-    padding: 42px 400px 0 0;
+    padding: 43px 400px 0 0;
     .description {
       font-size: 15px;
       line-height: 23px;
@@ -1019,7 +1020,7 @@ th {
 
 @media (min-width: @screen-lg) {
   .home .banner {
-    padding: 78px 600px 0 0;
+    padding: 79px 600px 0 0;
     .description {
       max-width: 540px;
       .pull-right {

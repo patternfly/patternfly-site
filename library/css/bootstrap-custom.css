@@ -8780,6 +8780,7 @@ h6 .label {
   }
   .navbar-pf .navbar-utility {
     border-bottom: 0;
+    font-size: 11px;
     position: absolute;
     right: 0;
     top: 0;
@@ -9527,7 +9528,6 @@ h2,
   border-top-color: #00618a;
 }
 body {
-  font-size: 14px;
   padding-top: 0 !important;
 }
 body.home {
@@ -9679,6 +9679,7 @@ header .navbar.navbar-default {
   -webkit-border-radius: 0;
   border-radius: 0;
   border-top: 1px solid #1688c0;
+  font-size: 13px;
   margin-bottom: 0;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false) !important;
 }
@@ -9686,20 +9687,20 @@ header .navbar.navbar-default .form-group {
   display: block;
 }
 header .navbar.navbar-default .navbar-brand {
-  background: url(../img/patternfly.svg) no-repeat 15px 50%;
+  background: url(../img/patternfly.svg) no-repeat 20px 50%;
   height: 40px;
   line-height: 0;
   margin-bottom: 15px;
   margin-top: 15px;
   position: relative;
   text-indent: -9999px;
-  width: 235px;
+  width: 240px;
 }
 header .navbar.navbar-default .navbar-brand:hover:after {
   background: #1F89C7;
   content: '';
   height: 1px;
-  left: 71px;
+  left: 76px;
   position: absolute;
   top: 33px;
   width: 163px;
@@ -9733,7 +9734,7 @@ header .navbar.navbar-default .navbar-form:before {
   content: "\f002";
   font: 14px/1 "FontAwesome";
   position: absolute;
-  left: 18px;
+  left: 24px;
   top: 4px;
 }
 header .navbar.navbar-default .navbar-form:hover:before {
@@ -9799,7 +9800,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 }
 .home .banner {
   color: #dbdada;
-  padding: 52px 500px 0 0;
+  padding: 53px 500px 0 0;
   position: relative;
 }
 .home .banner .description {
@@ -10363,7 +10364,6 @@ pre.prettyprint {
   padding: 0;
 }
 #sidebar2 .advanced_recent_posts_widget .post-title {
-  font-size: 14px;
   font-weight: 400;
 }
 #sidebar2 .advanced_recent_posts_widget ul li {
@@ -10393,7 +10393,7 @@ th {
   padding-top: 0;
 }
 #widget-footer hr {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 #widget-footer p {
   margin-bottom: 0;
@@ -10417,9 +10417,11 @@ th {
   .navbar.navbar-default .navbar-collapse .navbar-form {
     margin-bottom: 24px;
     margin-top: 22px;
+    padding-left: 10px;
     padding-right: 0;
   }
   .navbar.navbar-default .navbar-collapse .navbar-form:before {
+    left: 14px;
     top: 6px;
   }
   .navbar.navbar-default .navbar-collapse .navbar-form .form-control {
@@ -10519,10 +10521,10 @@ th {
     text-shadow: none;
   }
   header .navbar.navbar-default .navbar-right > li > a {
-    padding: 7px 15px;
+    padding: 7px 20px;
   }
   .home .banner {
-    padding: 42px 400px 0 0;
+    padding: 43px 400px 0 0;
   }
   .home .banner .description {
     font-size: 15px;
@@ -10542,7 +10544,7 @@ th {
 }
 @media (min-width: 1200px) {
   .home .banner {
-    padding: 78px 600px 0 0;
+    padding: 79px 600px 0 0;
   }
   .home .banner .description {
     max-width: 540px;
