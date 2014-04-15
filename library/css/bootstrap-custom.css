@@ -9799,7 +9799,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 }
 .home .banner {
   color: #dbdada;
-  padding: 54px 500px 0 0;
+  padding: 52px 500px 0 0;
   position: relative;
 }
 .home .banner .description {
@@ -10522,7 +10522,7 @@ th {
     padding: 7px 15px;
   }
   .home .banner {
-    padding: 44px 400px 0 0;
+    padding: 42px 400px 0 0;
   }
   .home .banner .description {
     font-size: 15px;
@@ -10542,7 +10542,7 @@ th {
 }
 @media (min-width: 1200px) {
   .home .banner {
-    padding: 80px 600px 0 0;
+    padding: 78px 600px 0 0;
   }
   .home .banner .description {
     max-width: 540px;
@@ -10589,10 +10589,10 @@ th {
   .home .banner {
     background: url(/wp-content/uploads/2014/01/bg-banner.jpg) no-repeat 50% -1px;
     background-size: auto 100%;
-    margin-left: -15px;
-    margin-right: -15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 30px;
   }
   .home .banner h1 {
