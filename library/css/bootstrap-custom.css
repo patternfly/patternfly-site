@@ -8046,7 +8046,17 @@ label {
 .pficon-history:before {
   content: "\e617";
 }
+.pficon-home:before {
+  content: "\e618";
+}
+.pficon-remove:before {
+  content: "\e619";
+}
+.pficon-add:before {
+  content: "\e61a";
+}
 .navbar-nav > li > .dropdown-menu.infotip {
+  border-top-width: 1px !important;
   margin-top: 10px;
 }
 @media (max-width: 991px) {
@@ -8062,6 +8072,7 @@ label {
   padding: 0;
 }
 .infotip .list-group {
+  border-top: 0;
   margin: 0;
   padding: 8px 0;
 }
