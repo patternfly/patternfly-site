@@ -529,6 +529,20 @@ html #wpadminbar {
     @media (min-width: @grid-float-breakpoint) {
       padding-left: 80px;
     }
+    > p + br {
+      display: none;
+    }
+    #captcha_code {
+      background-color: @input-bg !important;
+      border: 1px solid @input-border !important;
+      font-size: @font-size-base !important;
+      margin: 0 0 16px !important;
+      padding: @padding-base-vertical @padding-base-horizontal !important;
+      width: 100% !important;
+      @media (min-width: @grid-float-breakpoint) { 
+        width: 300px !important;
+      }
+    }
     input[type=submit] {
       border-radius: @border-radius-base;
       .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-bg-img-start; @btn-primary-bg-img-stop; @btn-primary-border);
