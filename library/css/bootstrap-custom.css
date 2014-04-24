@@ -10031,22 +10031,6 @@ html #wpadminbar {
     padding-left: 80px;
   }
 }
-.login form > p + br {
-  display: none;
-}
-.login form #captcha_code {
-  background-color: #ffffff !important;
-  border: 1px solid #bababa !important;
-  font-size: 12px !important;
-  margin: 0 0 16px !important;
-  padding: 2px 6px !important;
-  width: 100% !important;
-}
-@media (min-width: 992px) {
-  .login form #captcha_code {
-    width: 300px !important;
-  }
-}
 .login form input[type=submit] {
   border-radius: 1px;
   background-color: #189ad1;
