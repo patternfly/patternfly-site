@@ -29,7 +29,10 @@ jQuery( document ).ready(function() {
       }
     }
   });
+  // Prevent the default behavior of <a>s in .pf-examples on /widgets
   jQuery(".pf-example a").click(function( event ) {
     event.preventDefault();
   });
+  // Initialize Boostrap-select
+  jQuery('.selectpicker').selectpicker();
 });
