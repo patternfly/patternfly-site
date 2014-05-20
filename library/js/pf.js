@@ -1,4 +1,15 @@
 jQuery( document ).ready(function() {
+  // Initialize Bootstrap-select
+  jQuery('.selectpicker').selectpicker();
+  // Initialize Data Tables
+  jQuery('.datatable').dataTable();
+  // Initialize Popovers
+  PatternFly.popovers('[data-toggle=popover]');
+ // Initialize Tooltip
+  jQuery('.tooltip-demo').tooltip({
+    selector: "[data-toggle=tooltip]",
+    container: "body"
+  });
   // Remove '.current-menu-parent' and '.current-menu-item' from primary nav Widgets subnav items so the indicator never shows
   jQuery('#menu-primary .current-menu-item > a[href*="/widgets"] + ul li').each(function () {
     jQuery(this).removeClass('current-menu-parent').removeClass('current-menu-item');
@@ -33,6 +44,4 @@ jQuery( document ).ready(function() {
   jQuery(".pf-example a").click(function( event ) {
     event.preventDefault();
   });
-  // Initialize Boostrap-select
-  jQuery('.selectpicker').selectpicker();
 });

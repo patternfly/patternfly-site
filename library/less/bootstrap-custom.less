@@ -532,6 +532,11 @@ html #wpadminbar {
     input[type=submit] {
       border-radius: @border-radius-base;
       .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-bg-img-start; @btn-primary-bg-img-stop; @btn-primary-border);
+      font-size: @font-size-base !important;
+      height: 30px !important;
+      line-height: 1 !important;
+      margin-bottom: 0 !important;
+      padding: 2px 12px !important;
       &:active {
         .box-shadow(inset 0 2px 8px rgba(0,0,0,.2));
       }
@@ -543,7 +548,9 @@ html #wpadminbar {
       }
     }
     input[type=checkbox] {
+      height: 16px;
       margin: -3px 4px 0 0;
+      width: 16px;
     }
     input[type=password], input[type=text] {
       background-color: @input-bg;
@@ -574,6 +581,7 @@ html #wpadminbar {
     }
     .forgetmenot label {
       font-size: @font-size-base;
+      margin-bottom: 16px;
     }
   }
   h1 { 
@@ -594,6 +602,10 @@ html #wpadminbar {
       }
     }
   }
+  #pass-strength-result {
+    color: @text-color;
+    margin-top: 0;
+  }
   #login {
     padding: 0;
     width: auto;
@@ -606,11 +618,15 @@ html #wpadminbar {
       display: none;
     }
     form p {
+      clear: left;
       font-size: @font-size-base;
       font-weight: normal;
       &.submit {
         @media (min-width: @grid-float-breakpoint) { 
           width: 300px;
+        }
+        input {
+          float: none;
         }
       }
     }
