@@ -10167,52 +10167,8 @@ h2,
 h3 {
   line-height: 40px;
 }
-.icons {
-  float: left;
-  list-style: none;
-  margin: 0 0 20px;
-  padding: 0;
-  width: 100%;
-}
-.icons .fa,
-.icons .glyphicon,
-.icons .pficon {
-  font-size: 28px;
-  margin-bottom: 15px;
-  margin-top: 5px;
-}
-.icons .icon-class {
-  display: block;
-  font-size: 11px;
-  text-align: center;
-  word-wrap: break-word;
-}
-.icons li {
-  border: 1px solid #eee;
-  float: left;
-  font-size: 12px;
-  height: 150px;
-  line-height: 1.4;
-  margin: 0 -1px -1px 0;
-  overflow: hidden;
-  overflow-y: auto;
-  padding: 10px;
-  text-align: center;
-  width: 25%;
-}
-@media (max-width: 575px) {
-  .icons li {
-    height: 200px;
-  }
-}
-@media (min-width: 992px) {
-  .icons li {
-    height: 170px;
-    width: 16.667%;
-  }
-}
 header + .container {
-  padding-top: 70px;
+  padding-top: 72px;
 }
 header .navbar.navbar-default {
   background: #040404 !important;
@@ -10342,7 +10298,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 }
 .home .banner {
   color: #dbdada;
-  padding: 53px 500px 0 0;
+  padding: 52px 500px 0 0;
   position: relative;
 }
 .home .banner .description {
@@ -10434,6 +10390,50 @@ hr {
 }
 html #wpadminbar {
   z-index: 10000 !important;
+}
+.icons {
+  float: left;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+  width: 100%;
+}
+.icons .fa,
+.icons .glyphicon,
+.icons .pficon {
+  font-size: 28px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+.icons .icon-class {
+  display: block;
+  font-size: 11px;
+  text-align: center;
+  word-wrap: break-word;
+}
+.icons li {
+  border: 1px solid #eee;
+  float: left;
+  font-size: 12px;
+  height: 150px;
+  line-height: 1.4;
+  margin: 0 -1px -1px 0;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 10px;
+  text-align: center;
+  width: 25%;
+}
+@media (max-width: 575px) {
+  .icons li {
+    height: 200px;
+  }
+}
+@media (min-width: 992px) {
+  .icons li {
+    height: 170px;
+    width: 16.667%;
+  }
 }
 .incsub_wiki #btn_save {
   background-color: #eee;
@@ -11041,7 +11041,7 @@ th {
 }
 @media (max-width: 991px) {
   body.home {
-    background-position: 50% 46px;
+    background-position: 50% 26px;
   }
   header .navbar.navbar-default .dropdown-submenu > a:after {
     display: none;
@@ -11082,16 +11082,16 @@ th {
     padding: 7px 20px;
   }
   .home .banner {
-    padding: 43px 400px 0 0;
+    padding: 22px 400px 0 0;
   }
   .home .banner .description {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 23px;
     max-width: 300px;
   }
   .home .banner .description .pull-right {
     bottom: 1px;
-    width: 400px;
+    width: 380px;
   }
   .home .banner h1 {
     font-size: 20px;
@@ -11102,7 +11102,7 @@ th {
 }
 @media (min-width: 1200px) {
   .home .banner {
-    padding: 79px 600px 0 0;
+    padding: 78px 600px 0 0;
   }
   .home .banner .description {
     max-width: 540px;
