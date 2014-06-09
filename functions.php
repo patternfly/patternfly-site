@@ -598,22 +598,22 @@ if( !function_exists( "theme_js" ) ) {
   function theme_js(){
   
     wp_register_script( 'bootstrap', 
-      get_template_directory_uri() . '/library/components/bootstrap/dist/js/bootstrap.min.js', 
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap/dist/js/bootstrap.min.js', 
       array('jquery'), 
       '3.1.1' );
 
     wp_register_script( 'bootstrap-select', 
-      get_template_directory_uri() . '/library/components/bootstrap-select/bootstrap-select.min.js', 
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-select/bootstrap-select.min.js', 
       array('jquery'), 
       '1.5.2' );
 
     wp_register_script( 'bootstrap-treeview', 
-      get_template_directory_uri() . '/library/components/bootstrap-treeview/dist/bootstrap-treeview.min.js', 
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js', 
       array('jquery'), 
       '1.0.0' );
 
     wp_register_script( 'datatables', 
-      get_template_directory_uri() . '/library/components/datatables/media/js/jquery.dataTables.js', 
+      get_template_directory_uri() . '/library/components/patternfly/components/datatables/media/js/jquery.dataTables.js', 
       array('jquery'), 
       '1.10.0' );
 
