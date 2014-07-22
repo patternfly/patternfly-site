@@ -686,6 +686,27 @@ html #wpadminbar {
   }
 }
 
+// Anchor offset for navbars
+.post_content {
+  div[id], h2[id], h3[id], h4[id], h5[id], p[id] {
+    // Not logged in to Wordpress (81px = 71px [height of .navbar-fixed-top] + 10px)
+    margin-top: -81px;
+    padding-top: 81px;
+    // Logged in to Wordpress and mobile resolution, site navbar no longer fixed (56px = 46px [height of .admin-bar] + 10px)
+    body.admin-bar & {
+      margin-top: -56px;
+      padding-top: 56px;
+    }
+    // Logged in to Wordpress and desktop resolution (113px = 71px [height of .navbar-fixed-top] + 32px [height of .admin-bar] + 10px)
+    @media (min-width: 783px) {
+      body.admin-bar & {
+        margin-top: -113px;
+        padding-top: 113px;
+      }
+    }
+  }
+}
+
 pre.prettyprint {
   background: none !important;
   border: 0 !important;
@@ -709,8 +730,9 @@ pre.prettyprint {
 }
 
 .section, .super-section {
-  padding-top: 100px;
+  padding-top: 100px !important;
   position: relative;
+  margin-top: 0 !important;
   &:before {
     background: #f0f0f0;
     content: '';

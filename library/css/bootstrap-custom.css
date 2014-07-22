@@ -10781,6 +10781,35 @@ fieldset[disabled] .login form input[type=submit].active {
 .pf-example h3 {
   line-height: 1.1;
 }
+.post_content div[id],
+.post_content h2[id],
+.post_content h3[id],
+.post_content h4[id],
+.post_content h5[id],
+.post_content p[id] {
+  margin-top: -81px;
+  padding-top: 81px;
+}
+body.admin-bar .post_content div[id],
+body.admin-bar .post_content h2[id],
+body.admin-bar .post_content h3[id],
+body.admin-bar .post_content h4[id],
+body.admin-bar .post_content h5[id],
+body.admin-bar .post_content p[id] {
+  margin-top: -56px;
+  padding-top: 56px;
+}
+@media (min-width: 783px) {
+  body.admin-bar .post_content div[id],
+  body.admin-bar .post_content h2[id],
+  body.admin-bar .post_content h3[id],
+  body.admin-bar .post_content h4[id],
+  body.admin-bar .post_content h5[id],
+  body.admin-bar .post_content p[id] {
+    margin-top: -113px;
+    padding-top: 113px;
+  }
+}
 pre.prettyprint {
   background: none !important;
   border: 0 !important;
@@ -10802,8 +10831,9 @@ pre.prettyprint {
 }
 .section,
 .super-section {
-  padding-top: 100px;
+  padding-top: 100px !important;
   position: relative;
+  margin-top: 0 !important;
 }
 .section:before,
 .super-section:before {
