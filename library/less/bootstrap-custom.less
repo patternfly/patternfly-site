@@ -688,7 +688,7 @@ html #wpadminbar {
 
 // Anchor offset for navbars
 .post_content {
-  div[id], h2[id], h3[id], h4[id], h5[id], p[id] {
+  h2[id], h3[id], h4[id], h5[id], p[id] {
     // Not logged in to Wordpress (81px = 71px [height of .navbar-fixed-top] + 10px)
     margin-top: -81px;
     padding-top: 81px;
@@ -730,9 +730,8 @@ pre.prettyprint {
 }
 
 .section, .super-section {
-  padding-top: 100px !important;
+  padding-top: 100px;
   position: relative;
-  margin-top: 0 !important;
   &:before {
     background: #f0f0f0;
     content: '';
