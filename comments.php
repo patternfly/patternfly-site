@@ -105,10 +105,12 @@ The comments page for Bones
       <input type="email" name="email" id="email" value="<?php echo esc_attr($comment_author_email); ?>" placeholder="<?php _e("Your Email","bonestheme"); ?>" tabindex="2" <?php if ($req) echo "aria-required='true'"; ?> class="form-control" />
       <span class="help-inline">(<?php _e("will not be published","bonestheme"); ?>)</span>
     </div>
+    <!--
     <div class="form-group">
       <label for="url"><?php _e("Website","bonestheme"); ?></label>
       <input type="url" name="url" id="url" value="<?php echo esc_attr($comment_author_url); ?>" placeholder="<?php _e("Your Website","bonestheme"); ?>" tabindex="3" class="form-control" />
     </div>
+    -->
   </div>
 
   <?php endif; ?>
