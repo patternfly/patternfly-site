@@ -1,4 +1,6 @@
 jQuery( document ).ready(function() {
+  // Initialize Bootstrap-Combobox
+  jQuery('.combobox').combobox();
   // Initialize Bootstrap-select
   jQuery('.selectpicker').selectpicker();
   // Initialize Data Tables

@@ -602,6 +602,11 @@ if( !function_exists( "theme_js" ) ) {
       array('jquery'), 
       '3.1.1' );
 
+    wp_register_script( 'bootstrap-combobox', 
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-combobox/js/bootstrap-combobox.js', 
+      array('jquery'), 
+      '1.5.2' );
+
     wp_register_script( 'bootstrap-select', 
       get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-select/bootstrap-select.min.js', 
       array('jquery'), 
@@ -633,6 +638,7 @@ if( !function_exists( "theme_js" ) ) {
       '1.2' );
 
     wp_enqueue_script('bootstrap');
+    wp_enqueue_script('bootstrap-combobox');
     wp_enqueue_script('bootstrap-select');
     wp_enqueue_script('bootstrap-treeview');
     wp_enqueue_script('datatables');
