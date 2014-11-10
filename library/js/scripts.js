@@ -60,6 +60,7 @@ jQuery(document).ready(function($) {
 	});
 	
 	// Input placeholder text fix for IE
+  /* 
 	$('[placeholder]').focus(function() {
 	  var input = $(this);
 	  if (input.val() == input.attr('placeholder')) {
@@ -83,7 +84,7 @@ jQuery(document).ready(function($) {
 		}
 	  })
 	});
-	
+	*/
 				
 	$('.alert-message').alert();
 	
