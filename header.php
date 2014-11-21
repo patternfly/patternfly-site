@@ -9,7 +9,6 @@
   
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -24,7 +23,7 @@
           href="<?php echo get_template_directory_uri();?>/library/ico/apple-touch-icon-57-precomposed.png">
     <!-- html5.js -->
     <!--[if lt IE 9]>
-      <script src="<?php echo get_template_directory_uri();?>/library/components/html5shiv/dist/html5shiv.min.js"></script>
+      <script src="<?php echo get_template_directory_uri();?>/library/components/patternfly/components/html5shiv/dist/html5shiv.min.js"></script>
     <![endif]-->
 
     <!-- wordpress head functions -->
@@ -39,7 +38,7 @@
 
     <!-- media-queries.js (fallback) -->
     <!--[if lt IE 9]>
-      <script src="<?php echo get_template_directory_uri();?>/library/components/respond/dest/respond.min.js"></script>      
+      <script src="<?php echo get_template_directory_uri();?>/library/components/patternfly/components/respond/dest/respond.min.js"></script>      
     <![endif]-->
   </head>
   
@@ -89,4 +88,3 @@
         </div><!-- end .container -->
       </nav> <!-- end .navbar -->
     </header> <!-- end header -->
-    <div class="container" id="overview">

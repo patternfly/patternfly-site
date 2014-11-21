@@ -5,7 +5,8 @@ Template Name: Left Sidebar Page
 ?>
 
 <?php get_header(); ?>
-			
+		<div class="container" id="overview">
+
 			<div id="content" class="clearfix row">
             
             	<?php get_sidebar(); // sidebar 1 ?>
@@ -57,5 +58,7 @@ Template Name: Left Sidebar Page
 				</div> <!-- end #main -->
     
 			</div> <!-- end #content -->
+
+    </div><!-- end .container -->
 
 <?php get_footer(); ?>

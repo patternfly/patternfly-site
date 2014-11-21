@@ -110,33 +110,12 @@ function bones_register_sidebars() {
       'after_widget' => '</div>',
       'before_title' => '<h2 class="widgettitle">',
       'after_title' => '</h2>',
-
-    ));
-    
-    register_sidebar(array(
-      'id' => 'sidebar2',
-      'name' => 'Homepage Left Sidebar',
-      'description' => 'Used only on the homepage page template.',
-      'before_widget' => '<div id="%1$s" class="widget  %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h2 class="widgettitle">',
-      'after_title' => '</h2>',
     ));
 
-    register_sidebar(array(
-      'id' => 'sidebar3',
-      'name' => 'Homepage Right Sidebar',
-      'description' => 'Used only on the homepage page template.',
-      'before_widget' => '<div id="%1$s" class="widget  %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h2 class="widgettitle">',
-      'after_title' => '</h2>',
-    ));
-    
     register_sidebar(array(
       'id' => 'footer1',
       'name' => 'Footer 1',
-      'before_widget' => '<div id="%1$s" class="widget col-sm-6 col-md-6 %2$s">',
+      'before_widget' => '<div id="%1$s" class="widget col-sm-8 col-md-9 %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h2 class="widgettitle">',
       'after_title' => '</h2>',
@@ -145,22 +124,12 @@ function bones_register_sidebars() {
     register_sidebar(array(
       'id' => 'footer2',
       'name' => 'Footer 2',
-      'before_widget' => '<div id="%1$s" class="widget col-sm-6 col-md-6 %2$s">',
+      'before_widget' => '<div id="%1$s" class="widget col-sm-4 col-md-3 %2$s">',
       'after_widget' => '</div>',
       'before_title' => '<h2 class="widgettitle">',
       'after_title' => '</h2>',
     ));
 
-    /* register_sidebar(array(
-      'id' => 'footer3',
-      'name' => 'Footer 3',
-      'before_widget' => '<div id="%1$s" class="widget col-sm-4 col-md-4 %2$s">',
-      'after_widget' => '</div>',
-      'before_title' => '<h2 class="widgettitle">',
-      'after_title' => '</h2>',
-    )); */
-    
-    
     /* 
     to add more sidebars or widgetized areas, just copy
     and edit the above sidebar code. In order to call 
