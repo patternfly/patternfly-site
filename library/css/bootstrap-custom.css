@@ -10422,7 +10422,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   position: relative;
 }
 .home .definition h2:after {
-  background: #080808;
+  background: #bbb;
   bottom: -30px;
   content: '';
   height: 2px;
