@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-			
+		<div class="container" id="overview">
 			<div id="content" class="clearfix row">
 			
 				<div id="main" class="col-md-12 clearfix" role="main">
@@ -35,4 +35,5 @@
     
 			</div> <!-- end #content -->
 
+		</div> <!-- end #overiew -->
 <?php get_footer(); ?>

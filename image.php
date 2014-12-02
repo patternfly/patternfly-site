@@ -7,7 +7,7 @@
  */ 
 
 get_header(); ?>
-			
+		<div class="container" id="overview">
 			<div id="content" class="clearfix row">
 			
 				<div id="main" class=" col-sm-9 col-md-9 col-lg-9 clearfix" role="main">
@@ -136,4 +136,5 @@ get_header(); ?>
     
 			</div> <!-- end #content -->
 
+		</div> <!-- end #overiew -->
 <?php get_footer(); ?>

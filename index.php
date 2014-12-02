@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-			
+		<div class="container" id="overview">
 			<?php
 				$blog_hero = of_get_option('blog_hero');
 				if ($blog_hero){
@@ -59,4 +59,5 @@
     
 			</div> <!-- end #content -->
 
+		</div> <!-- end #overiew -->
 <?php get_footer(); ?>
