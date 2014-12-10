@@ -4,8 +4,8 @@ module.exports = function (grunt) {
 
     // configurable paths
     var projectConfig = {
-        src: '',
-        dist: 'library'
+        dist: 'library',
+        src: ''
     };
 
     try {
@@ -13,33 +13,33 @@ module.exports = function (grunt) {
     } catch (e) {}
 
     grunt.initConfig({
-        config: projectConfig,
         clean: {
             build: '<%= config.dist %>'
+        },
+        config: projectConfig,
+        less: {
+            development: {
+                files: {
+                    "library/css/bootstrap-custom.css": "library/less/bootstrap-custom.less"
+                },
+                options: {
+                    paths: ["library/less/"]
+                }
+            },
+            production: {
+                files: {
+                    "library/css/bootstrap-custom.min.css": "library/less/bootstrap-custom.less"
+                },
+                options: {
+                    cleancss: true,
+                    paths: ["library/less/"]
+                }
+            }
         },
         watch: {
             css: {
                 files: 'library/less/*.less',
                 tasks: ['less'],
-            }
-        },
-        less: {
-            development: {
-                options: {
-                    paths: ["library/less/"]
-                },
-                files: {
-                    "library/css/bootstrap-custom.css": "library/less/bootstrap-custom.less"
-                }
-            },
-            production: {
-                options: {
-                    paths: ["library/less/"],
-                    cleancss: true
-                },
-                files: {
-                    "library/css/bootstrap-custom.min.css": "library/less/bootstrap-custom.less"
-                }
             }
         }
     });
