@@ -11261,6 +11261,9 @@ th {
     padding-top: 0;
   }
 }
+.wow {
+  visibility: hidden;
+}
 /* Responsive layouts */
 @media (min-width: 992px) {
   .navbar.navbar-default .navbar-collapse .navbar-form {
