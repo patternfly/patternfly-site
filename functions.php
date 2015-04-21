@@ -591,6 +591,11 @@ if( !function_exists( "theme_js" ) ) {
       array('jquery'), 
       '1.10.0' );
 
+    wp_register_script( 'google-code-prettify', 
+      get_template_directory_uri() . '/library/components/patternfly/components/google-code-prettify/bin/prettify.min.js', 
+      array('jquery'), 
+      '1.0.3' );
+
     wp_register_script( 'patternfly', 
       get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js', 
       array('jquery'), 
@@ -611,6 +616,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_enqueue_script('bootstrap-select');
     wp_enqueue_script('bootstrap-treeview');
     wp_enqueue_script('datatables');
+    wp_enqueue_script('google-code-prettify');
     wp_enqueue_script('patternfly');
     wp_enqueue_script('wpbs-scripts');
     // call pf last since it initializes widgets

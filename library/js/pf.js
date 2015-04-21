@@ -1,4 +1,6 @@
 jQuery( document ).ready(function() {
+  // Initialize Google Code Prettify
+  prettyPrint();
   // Initialize Bootstrap-Combobox
   jQuery('.combobox').combobox();
   // Initialize Bootstrap-select
@@ -41,6 +43,10 @@ jQuery( document ).ready(function() {
         return (this.bottom = jQuery('#widget-footer').outerHeight(true)+30)
       }
     }
+  });
+  // refresh the scrollspy when opening/closing collapses
+  jQuery('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
+    jQuery('body').scrollspy('refresh');
   });
   // Prevent the default behavior of <a>s in .pf-examples on /widgets
   jQuery(".pf-example a").click(function( event ) {
