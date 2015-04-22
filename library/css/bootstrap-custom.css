@@ -11416,6 +11416,7 @@ body.admin-bar .post_content p[id] {
 }
 .sidebar .menu {
   background: #fff;
+  display: none;
   line-height: 20px;
   padding: 17px 0 18px;
   margin: 25px 0 0;

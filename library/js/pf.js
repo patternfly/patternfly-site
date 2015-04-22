@@ -35,7 +35,7 @@ jQuery( document ).ready(function() {
   jQuery(".menu-primary-container ul").addClass("nav");
   // And attach scrollspy
   jQuery('body').scrollspy({ target: '.menu-primary-container', offset: 100 });
-  // Affix the sidebar menu
+  // Affix the sidebar menu and show it--menu is hidden initally to avoid a flash of the expanded scrollspy 
   jQuery('.sidebar .menu').affix({
     offset: {
       top: 0,
@@ -43,7 +43,7 @@ jQuery( document ).ready(function() {
         return (this.bottom = jQuery('#widget-footer').outerHeight(true)+30)
       }
     }
-  });
+  }).show();
   // refresh the scrollspy when opening/closing collapses
   jQuery('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
     jQuery('body').scrollspy('refresh');
