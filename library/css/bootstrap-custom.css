@@ -11529,6 +11529,9 @@ th {
     margin-top: 0;
   }
 }
+.tn-prototype.tn-prototype-inverse a:hover:before {
+  background: rgba(255, 255, 255, 0.4);
+}
 .tn-prototype a {
   display: block;
   position: relative;
