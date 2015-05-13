@@ -10458,6 +10458,7 @@ h2,
 }
 /* Overrides of PatternFly variables for the site */
 body {
+  font-size: 13px;
   padding-top: 0 !important;
 }
 .breadcrumb {
