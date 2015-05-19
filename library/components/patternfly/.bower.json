@@ -1,6 +1,5 @@
 {
   "name": "PatternFly",
-  "version": "1.1.4",
   "authors": "Red Hat",
   "license": "Apache-2.0",
   "homepage": "https://www.patternfly.org",
@@ -15,7 +14,6 @@
     "app/components",
     "test",
     "tests",
-    "tests-src",
     "package.json",
     "Gruntfile.js",
     "PatternFlyIcons-webfont.json",
@@ -23,7 +21,7 @@
     "patternfly.spec.in"
   ],
   "devDependencies": {
-    "bootstrap": "~3.1.1",
+    "bootstrap": "~3.3.4",
     "bootstrap-combobox": "~1.1.6",
     "bootstrap-select": "~1.5.4",
     "bootstrap-treeview": "~1.0.1",
@@ -35,13 +33,12 @@
     "html5shiv": "~3.7.2",
     "respond": "~1.4.2"
   },
-  "_release": "1.1.4",
+  "_release": "32c2029",
   "_resolution": {
-    "type": "version",
-    "tag": "v1.1.4",
-    "commit": "4f42d89ec12c52e94818b4e16a4a94fd2ac62874"
+    "type": "commit",
+    "commit": "32c2029"
   },
   "_source": "git://github.com/patternfly/patternfly.git",
-  "_target": "*",
+  "_target": "32c2029",
   "_originalSource": "git://github.com/patternfly/patternfly"
 }
