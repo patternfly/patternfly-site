@@ -15,10 +15,6 @@ Template Name: Full Width Page
           
           <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-            <?php if (function_exists('bootstrapwp_breadcrumbs')) {
-              bootstrapwp_breadcrumbs();
-            } ?>
-
             <header>
               
               <h1><?php the_title(); ?></h1>

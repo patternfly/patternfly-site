@@ -9483,6 +9483,17 @@ label {
 .pficon-users:before {
   content: "\e60f";
 }
+.pficon-add-circle-o:before {
+  content: "\e61b";
+}
+.pficon-warning-triangle-o:before {
+  color: #ec7a08;
+  content: "\e61c";
+}
+.pficon-error-circle-o:before {
+  color: #cc0000;
+  content: "\e61d";
+}
 .pficon-settings:before {
   content: "\e610";
 }
@@ -10804,6 +10815,7 @@ td > .progress:first-child:last-child {
 }
 .progress-description .fa,
 .progress-description .pficon {
+  font-size: 14px;
   margin-right: 3px;
 }
 .progress-description .tooltip {
@@ -11823,49 +11835,19 @@ html {
 html #wpadminbar {
   z-index: 10000 !important;
 }
-.icons {
-  float: left;
-  list-style: none;
-  margin: 0 0 20px;
-  padding: 0;
-  width: 100%;
-}
 .icons .fa,
 .icons .glyphicon,
 .icons .pficon {
-  font-size: 28px;
-  margin-bottom: 15px;
-  margin-top: 5px;
+  font-size: 14px;
+  margin-right: 5px;
+  text-align: center;
+  width: 14px;
 }
 .icons .icon-class {
-  display: block;
-  font-size: 11px;
-  text-align: center;
-  word-wrap: break-word;
+  display: inline-block;
 }
 .icons li {
-  border: 1px solid #eee;
-  float: left;
-  font-size: 12px;
-  height: 150px;
-  line-height: 1.4;
-  margin: 0 -1px -1px 0;
-  overflow: hidden;
-  overflow-y: auto;
-  padding: 10px;
-  text-align: center;
-  width: 25%;
-}
-@media (max-width: 575px) {
-  .icons li {
-    height: 200px;
-  }
-}
-@media (min-width: 992px) {
-  .icons li {
-    height: 170px;
-    width: 16.667%;
-  }
+  margin: 0 0 7px;
 }
 .incsub_wiki #btn_save {
   background-color: #eee;
@@ -12207,7 +12189,7 @@ fieldset[disabled] .login form input[type=submit].active {
 }
 .page-header {
   border-bottom: 0;
-  margin: 0;
+  margin-top: 34px;
   padding: 0;
 }
 .pf-example {
