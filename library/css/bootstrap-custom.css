@@ -11621,15 +11621,16 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 .home .btn-group .btn {
   background: #060606;
   border: 0;
-  padding: 6px 20px;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 100;
+  padding: 6px 12px;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-@media (max-width: 480px) {
+@media (min-width: 768px) {
   .home .btn-group .btn {
-    padding-left: 12px;
-    padding-right: 12px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .home .btn-group .btn:hover {
@@ -11696,8 +11697,13 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   margin-top: 40px;
 }
 .home h2 {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 100;
+}
+@media (min-width: 768px) {
+  .home h2 {
+    font-size: 30px;
+  }
 }
 .home .jumbotron {
   background: #010101;
@@ -11705,7 +11711,6 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   background-size: 40% auto, 40% auto, 60% auto, auto;
   color: #e4e4e4;
   margin: 0;
-  min-height: 780px;
   padding: 100px 0 110px;
   position: relative;
   text-align: center;
@@ -11719,6 +11724,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 @media (min-width: 768px) {
   .home .jumbotron {
     background-size: 40% 100%, 40% 100%, 60% auto, auto;
+    min-height: 780px;
     height: 100%;
   }
 }
@@ -11772,13 +11778,29 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: #3bb1dc;
-  font-size: 40px;
+  font-size: 26px;
   font-weight: 100;
-  line-height: 48px;
+  line-height: 1.5;
   margin: 22px 0 0;
 }
+@media (min-width: 480px) {
+  .home .jumbotron h1 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 768px) {
+  .home .jumbotron h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
 .home .jumbotron img {
-  width: 280px;
+  width: 160px;
+}
+@media (min-width: 480px) {
+  .home .jumbotron img {
+    width: 220px;
+  }
 }
 @media (min-width: 768px) {
   .home .jumbotron img {
@@ -11823,8 +11845,18 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   }
 }
 .home p {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 100;
+}
+@media (min-width: 768px) {
+  .home p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) {
+  .home p {
+    font-size: 16px;
+  }
 }
 hr {
   border-top-color: #D5D5D5;

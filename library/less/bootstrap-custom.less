@@ -279,13 +279,14 @@ header {
     .btn {
       background: #060606;
       border: 0;
-      padding: 6px 20px;
-      @media (max-width: @screen-xs) {
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-      font-size: 16px;
+      font-size: 13px;
       font-weight: 100;
+      padding: 6px 12px;
+      @media (min-width: @screen-sm) {
+        font-size: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
       .reset-filter();
       &:hover {
         background: lighten(#060606, 10%);
@@ -347,8 +348,11 @@ header {
     }
   }
   h2 {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 100;
+    @media (min-width: @screen-sm) {
+      font-size: 30px;
+    }
   }
   .jumbotron {
     background: #010101;
@@ -361,10 +365,10 @@ header {
     color: #e4e4e4;
     @media (min-width: @screen-sm) {
       background-size: 40% 100%, 40% 100%, 60% auto, auto;
+      min-height: 780px;
       height: 100%;
     }
     margin: 0;
-    min-height: 780px;
     padding: 100px 0 110px;
     position: relative;
     text-align: center;
@@ -416,13 +420,23 @@ header {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       color: #3bb1dc;
-      font-size: 40px;
+      font-size: 26px;
       font-weight: 100;
-      line-height: 48px;
+      line-height: 1.5;
       margin: 22px 0 0;
+      @media (min-width: @screen-xs) {
+        font-size: 28px;
+      }
+      @media (min-width: @screen-sm) {
+        font-size: 40px;
+        line-height: 48px;
+      }
     }
     img {
-      width: 280px;
+      width: 160px;
+      @media (min-width: @screen-xs) {
+        width: 220px;
+      }
       @media (min-width: @screen-sm) {
         width: 320px;
       }
@@ -462,8 +476,14 @@ header {
     }
   }
   p {
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 100;
+    @media (min-width: @screen-sm) {
+      font-size: 14px;
+    }
+    @media (min-width: @screen-md) {
+      font-size: 16px;
+    }
   }
 }
 
