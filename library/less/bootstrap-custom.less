@@ -511,6 +511,9 @@ html {
   li {
     margin: 0 0 7px;
   }
+  .zeroclipboard-is-hover {
+    color: @link-color;
+  }
 }
 
 .incsub_wiki {
@@ -881,7 +884,7 @@ html {
       &.active > .sub-menu.nav > .active .sub-menu {
         display: block !important;
       }
-      &.current-menu-item, &.current-menu-ancestor {
+      &.current-menu-item, &.current-menu-ancestor, &.current-page-ancestor {
         display: block;
         > a {
           font-weight: 600
