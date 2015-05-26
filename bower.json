@@ -17,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "patternfly": "git://github.com/patternfly/patternfly#f247b2e4b375d1d7f2186974522c8cec6d051547",
+    "patternfly": "git://github.com/patternfly/patternfly",
     "wow": "~1.0.2",
     "animate.css": "~3.2.0",
     "jquery.scrollTo": "~1.4.13",
