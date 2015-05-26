@@ -76,13 +76,6 @@
               </div><!-- end .form-group -->
             </form>
             <?php } ?>
-            <?php if (!is_user_logged_in()) {?>
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <?php wp_loginout('/'); ?>
-              </li>
-            </ul>
-            <?php } ?>
             <?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
           </div><!-- end .navbar-collapse -->
         </div><!-- end .container -->

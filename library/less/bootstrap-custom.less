@@ -1104,7 +1104,7 @@ th {
           .transition-duration(400ms);
           .transition-property(~'width, background, z-index');
           padding-right: 2px;
-          width: 110px;
+          width: 130px;
           z-index: auto;
         }
       }
@@ -1118,7 +1118,7 @@ th {
           }
         }
         > a {
-          padding: 25px 8px 26px;
+          padding: 25px 15px 26px;
         }
         &.dropdown {
           > .dropdown-menu {
@@ -1221,14 +1221,8 @@ th {
 }
 
 @media (min-width: @screen-lg) {
-  .navbar.navbar-default {
-    .navbar-right > li > a {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-    .navbar-collapse .navbar-form .form-control:focus {
-      width: 180px;
-    }
+  .navbar.navbar-default .navbar-collapse .navbar-form .form-control:focus {
+    width: 180px;
   }
   .sidebar .menu{
     width: 262px;

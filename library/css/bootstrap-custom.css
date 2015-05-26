@@ -12691,7 +12691,7 @@ th {
     -webkit-transition-property: width, background, z-index;
     transition-property: width, background, z-index;
     padding-right: 2px;
-    width: 110px;
+    width: 130px;
     z-index: auto;
   }
   .home .navbar.navbar-default .navbar-right > li:hover,
@@ -12700,7 +12700,7 @@ th {
     background: rgba(0, 0, 0, 0.1);
   }
   .navbar.navbar-default .navbar-right > li > a {
-    padding: 25px 8px 26px;
+    padding: 25px 15px 26px;
   }
   .navbar.navbar-default .navbar-right > li.dropdown > .dropdown-menu {
     border-top: 0;
@@ -12784,10 +12784,6 @@ th {
   }
 }
 @media (min-width: 1200px) {
-  .navbar.navbar-default .navbar-right > li > a {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   .navbar.navbar-default .navbar-collapse .navbar-form .form-control:focus {
     width: 180px;
   }
