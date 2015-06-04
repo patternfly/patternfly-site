@@ -569,27 +569,37 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'bootstrap', 
       get_template_directory_uri() . '/library/components/patternfly/components/bootstrap/dist/js/bootstrap.min.js', 
       array('jquery'), 
-      '3.1.1' );
+      '3.3.4' );
 
     wp_register_script( 'bootstrap-combobox', 
       get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-combobox/js/bootstrap-combobox.js', 
       array('jquery'), 
-      '1.5.2' );
+      '1.1.6' );
 
     wp_register_script( 'bootstrap-select', 
       get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-select/bootstrap-select.min.js', 
       array('jquery'), 
-      '1.5.2' );
+      '1.5.4' );
 
     wp_register_script( 'bootstrap-treeview', 
       get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js', 
       array('jquery'), 
-      '1.0.0' );
+      '1.0.1' );
+
+    wp_register_script( 'c3', 
+      get_template_directory_uri() . '/library/components/patternfly/components/c3/c3.min.js', 
+      array('jquery'), 
+      '0.4.10' );
+
+    wp_register_script( 'd3', 
+      get_template_directory_uri() . '/library/components/patternfly/components/d3/d3.min.js', 
+      array('jquery'), 
+      '3.5.0' );
 
     wp_register_script( 'datatables', 
       get_template_directory_uri() . '/library/components/patternfly/components/datatables/media/js/jquery.dataTables.js', 
       array('jquery'), 
-      '1.10.0' );
+      '1.10.7' );
 
     wp_register_script( 'google-code-prettify', 
       get_template_directory_uri() . '/library/components/patternfly/components/google-code-prettify/bin/prettify.min.js', 
@@ -599,7 +609,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'patternfly', 
       get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js', 
       array('jquery'), 
-      '1.0.0' );
+      '1.3.0' );
 
     wp_register_script( 'pf', 
       get_template_directory_uri() . '/library/js/pf.js', 
@@ -615,6 +625,8 @@ if( !function_exists( "theme_js" ) ) {
     wp_enqueue_script('bootstrap-combobox');
     wp_enqueue_script('bootstrap-select');
     wp_enqueue_script('bootstrap-treeview');
+    wp_enqueue_script('c3');
+    wp_enqueue_script('d3');
     wp_enqueue_script('datatables');
     wp_enqueue_script('google-code-prettify');
     wp_enqueue_script('patternfly');
