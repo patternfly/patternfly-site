@@ -22,5 +22,8 @@
     "animate.css": "~3.2.0",
     "jquery.scrollTo": "~1.4.13",
     "zeroclipboard": "~1.3.5"
+  },
+  "devDependencies": {
+    "patternfly": "2.0.0-rc1"
   }
 }

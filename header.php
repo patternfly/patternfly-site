@@ -1,47 +1,34 @@
-<!doctype html>  
-
-<!--[if IEMobile 7 ]> <html <?php language_attributes(); ?>class="no-js iem7"> <![endif]-->
-<!--[if lt IE 7 ]> <html <?php language_attributes(); ?> class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html <?php language_attributes(); ?> class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html <?php language_attributes(); ?> class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html <?php language_attributes(); ?> class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-  
+<!doctype html>
+<!--[if IE 9]><html <?php language_attributes(); ?> class="ie9 no-js"><![endif]-->
+<!--[if gt IE 9><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/library/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144"
-          href="<?php echo get_template_directory_uri();?>/library/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114"
-          href="<?php echo get_template_directory_uri();?>/library/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72"
-          href="<?php echo get_template_directory_uri();?>/library/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed"
-          href="<?php echo get_template_directory_uri();?>/library/ico/apple-touch-icon-57-precomposed.png">
-    <!-- html5.js -->
-    <!--[if lt IE 9]>
-      <script src="<?php echo get_template_directory_uri();?>/library/components/patternfly/components/html5shiv/dist/html5shiv.min.js"></script>
-    <![endif]-->
-
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri();?>/library/components/patternfly/dist/img/favicon.ico">
+    <!-- iPad retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php echo get_template_directory_uri();?>/library/components/patternfly/dist/img/apple-touch-icon-precomposed-152.png">
+    <!-- iPad retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo get_template_directory_uri();?>/library/components/patternfly/dist/img/apple-touch-icon-precomposed-144.png">
+    <!-- iPad non-retina icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php echo get_template_directory_uri();?>/library/components/patternfly/dist/img/apple-touch-icon-precomposed-76.png">
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo get_template_directory_uri();?>/library/components/patternfly/dist/img/apple-touch-icon-precomposed-72.png">
+    <!-- iPhone 6 Plus icon -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="<?php echo get_template_directory_uri();?>/library/components/patternfly/dist/img/apple-touch-icon-precomposed-180.png">
+    <!-- iPhone retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_template_directory_uri();?>/library/components/patternfly/dist/img/apple-touch-icon-precomposed-114.png">
+    <!-- iPhone non-retina icon (iOS < 7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php echo get_template_directory_uri();?>/library/components/patternfly/dist/img/apple-touch-icon-precomposed-57.png">
     <!-- wordpress head functions -->
     <?php wp_head(); ?>
     <!-- end of wordpress head -->
-
     <!-- theme options from options panel -->
     <?php get_wpbs_theme_options(); ?>
-
     <!-- typeahead plugin - if top nav search bar enabled -->
     <?php require_once('library/typeahead.php'); ?>
-
-    <!-- media-queries.js (fallback) -->
-    <!--[if lt IE 9]>
-      <script src="<?php echo get_template_directory_uri();?>/library/components/patternfly/components/respond/dest/respond.min.js"></script>      
-    <![endif]-->
   </head>
-  
   <body <?php body_class(); ?>>
     <header role="banner">
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">

@@ -5,8 +5,10 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-less": "~0.8.1",
-    "matchdep": "~0.3.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-contrib-cssmin": "^0.12.3",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-css-count": "^0.3.0",
+    "matchdep": "~0.3.0"
   }
 }

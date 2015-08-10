@@ -1,52 +1,75 @@
-module.exports = function (grunt) {
-    // load all grunt tasks
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
-    // configurable paths
-    var projectConfig = {
-        dist: 'library',
-        src: ''
-    };
-
-    try {
-        projectConfig.src = require('./bower.json').appPath || projectConfig.src;
-    } catch (e) {}
-
-    grunt.initConfig({
-        clean: {
-            build: '<%= config.dist %>'
-        },
-        config: projectConfig,
-        less: {
-            development: {
-                files: {
-                    "library/css/bootstrap-custom.css": "library/less/bootstrap-custom.less"
-                },
-                options: {
-                    paths: ["library/less/"]
-                }
-            },
-            production: {
-                files: {
-                    "library/css/bootstrap-custom.min.css": "library/less/bootstrap-custom.less"
-                },
-                options: {
-                    cleancss: true,
-                    paths: ["library/less/"]
-                }
-            }
-        },
-        watch: {
-            css: {
-                files: 'library/less/*.less',
-                tasks: ['less'],
-            }
+module.exports = function(grunt) {
+  // load all grunt tasks
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  // configurable paths
+  var projectConfig = {
+    dist: 'library',
+    src: ''
+  };
+  try {
+    projectConfig.src = require('./bower.json').appPath || projectConfig.src;
+  } catch (e) {}
+  grunt.initConfig({
+    clean: {
+      build: '<%= config.dist %>'
+    },
+    config: projectConfig,
+    csscount: {
+      production: {
+        src: ['library/css/patternfly-*.min.css'],
+        options: {
+          maxSelectors: 4096
         }
-    });
-
-    grunt.registerTask('build', [
-        'watch'
-    ]);
-
-    grunt.registerTask('default', ['build']);
+      }
+    },
+    cssmin: {
+      production: {
+        files: [{
+          expand: true,
+          cwd: 'library/css',
+          src: ['patternfly-*.css', '!*.min.css'],
+          dest: 'library/css',
+          ext: '.min.css',
+        }],
+        options: {
+          sourceMap: true
+        }
+      }
+    },
+    less: {
+      patternflyAdjusted: {
+        files: {
+          'library/css/patternfly-adjusted.css': 'library/less/patternfly-adjusted.less',
+        },
+        options: {
+          paths: ['less/'],
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapFilename: 'library/css/patternfly-adjusted.css.map',
+          sourceMapURL: 'patternfly-adjusted.css.map'
+        }
+      },
+      patternflySite: {
+        files: {
+          'library/css/patternfly-site.css': 'library/less/patternfly-site.less',
+        },
+        options: {
+          paths: ['less/'],
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapFilename: 'library/css/patternfly-site.css.map',
+          sourceMapURL: 'patternfly-site.css.map'
+        }
+      }
+    },
+    watch: {
+      css: {
+        files: ['library/less/*.less', 'library/components/patternfly/less/*.less'],
+        tasks: ['less', 'cssmin', 'csscount'],
+      }
+    }
+  });
+  grunt.registerTask('build', ['less', 'cssmin', 'csscount']);
+  grunt.registerTask('server', ['watch']);
+  grunt.registerTask('default', ['build']);
 };

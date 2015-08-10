@@ -553,11 +553,15 @@ function add_active_class($classes, $item) {
 if( !function_exists("theme_styles") ) {  
     function theme_styles() { 
         // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
-        wp_register_style( 'bootstrap-custom', get_template_directory_uri() . '/library/css/bootstrap-custom.min.css', array(), '1.0', 'all' );
-        wp_register_style( 'wp-bootstrap', get_stylesheet_uri(), array(), '1.0', 'all' );
-        
-        wp_enqueue_style( 'bootstrap-custom' );
-        wp_enqueue_style( 'wp-bootstrap');
+        wp_register_style( 'patternfly-adjusted', get_template_directory_uri() . '/library/css/patternfly-adjusted.min.css', array(), '1.0', 'all' );
+        wp_register_style( 'patternfly-additions', get_template_directory_uri() . '/library/components/patternfly/dist/css/patternfly-additions.min.css', array(), '1.0', 'all' );
+        wp_register_style( 'patternfly-site', get_template_directory_uri() . '/library/css/patternfly-site.min.css', array(), '1.0', 'all' );
+        wp_register_style( 'patternfly-wp', get_stylesheet_uri(), array(), '1.0', 'all' );
+
+        wp_enqueue_style( 'patternfly-adjusted' );
+        wp_enqueue_style( 'patternfly-additions' );
+        wp_enqueue_style( 'patternfly-site' );
+        wp_enqueue_style( 'patternfly-wp');
     }
 }
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
@@ -569,22 +573,27 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'bootstrap', 
       get_template_directory_uri() . '/library/components/patternfly/components/bootstrap/dist/js/bootstrap.min.js', 
       array('jquery'), 
-      '3.3.4' );
+      '3.3.5' );
 
     wp_register_script( 'bootstrap-combobox', 
       get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-combobox/js/bootstrap-combobox.js', 
       array('jquery'), 
       '1.1.6' );
 
-    wp_register_script( 'bootstrap-select', 
-      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-select/bootstrap-select.min.js', 
+    wp_register_script( 'bootstrap-datepicker', 
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js', 
       array('jquery'), 
-      '1.5.4' );
+      '1.4.0' );
+
+    wp_register_script( 'bootstrap-select', 
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-select/dist/js/bootstrap-select.min.js', 
+      array('jquery'), 
+      '1.7.3' );
 
     wp_register_script( 'bootstrap-treeview', 
       get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js', 
       array('jquery'), 
-      '1.0.1' );
+      '1.2.0' );
 
     wp_register_script( 'c3', 
       get_template_directory_uri() . '/library/components/patternfly/components/c3/c3.min.js', 
@@ -604,17 +613,17 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'google-code-prettify', 
       get_template_directory_uri() . '/library/components/patternfly/components/google-code-prettify/bin/prettify.min.js', 
       array('jquery'), 
-      '1.0.3' );
+      '1.0.4' );
 
     wp_register_script( 'patternfly', 
       get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js', 
       array('jquery'), 
-      '1.3.0' );
+      '2.0.0' );
 
     wp_register_script( 'pf', 
       get_template_directory_uri() . '/library/js/pf.js', 
       array('jquery'), 
-      '0.1.0' );
+      '2.0.0' );
 
     wp_register_script( 'wpbs-scripts', 
       get_template_directory_uri() . '/library/js/scripts.js', 
@@ -623,6 +632,7 @@ if( !function_exists( "theme_js" ) ) {
 
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('bootstrap-combobox');
+    wp_enqueue_script('bootstrap-datepicker');
     wp_enqueue_script('bootstrap-select');
     wp_enqueue_script('bootstrap-treeview');
     wp_enqueue_script('c3');
@@ -917,7 +927,7 @@ function bootstrapwp_breadcrumbs()
 
 // Add stylesheet to login
 function my_login_stylesheet() { ?>
-    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/library/css/bootstrap-custom.min.css'; ?>" type="text/css" media="all" />
+    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_bloginfo( 'stylesheet_directory' ) . '/library/css/patternfly-site.min.css'; ?>" type="text/css" media="all" />
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 

@@ -1,14 +1,20 @@
 jQuery( document ).ready(function() {
   // Initialize Google Code Prettify
   prettyPrint();
-  // Initialize Bootstrap-Combobox
+  // Initialize Bootstrap Combobox
   jQuery('.combobox').combobox();
+  // Initialize Bootstrap-datepicker
+  jQuery('.bootstrap-datepicker').datepicker({
+    autoclose: true,
+    todayBtn: "linked",
+    todayHighlight: true
+  });
   // Initialize Bootstrap-select
   jQuery('.selectpicker').selectpicker();
   // Initialize Data Tables
   jQuery('.datatable').dataTable();
   // Initialize Popovers
-  PatternFly.popovers('[data-toggle=popover]');
+  jQuery('[data-toggle=popover]').popovers();
  // Initialize Tooltip
   jQuery('.tooltip-demo').tooltip({
     selector: "[data-toggle=tooltip]",
