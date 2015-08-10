@@ -1050,7 +1050,7 @@ th {
   #logo-redhat {
     background: url(/wp-content/themes/patternfly/library/img/redhat.svg) no-repeat;
     display: block;
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-md) {
       float: right;
     }
     height: 25px;
@@ -1065,12 +1065,12 @@ th {
     margin-bottom: 0;
   }
   .widget_text:first-child {
-    padding-top: 5px;
+    padding-top: 0;
   }
   .widget_text + .widget_text {
     padding-top: 10px;
-    @media (min-width: @screen-sm) {
-      padding-top: 0;
+    @media (min-width: @screen-md) {
+      padding-top: 5px;
     }
   }
 }
@@ -1233,12 +1233,15 @@ th {
   }
 }
 
+@media (max-width: @screen-sm-max) {
+  #widget-footer .widget + .widget {
+    float: none;
+  }
+}
+
 @media (min-width: @screen-sm) {
   header + .container {
     padding-top: 73px;
-  }
-  #widget-footer .widget ul {
-    float: right;
   }
 }
 
@@ -1250,11 +1253,6 @@ th {
     &.affix, &.affix-bottom {
       position: static;
       width: auto;
-    }
-  }
-  #widget-footer {
-    .widget + .widget {
-      float: none;
     }
   }
 }
