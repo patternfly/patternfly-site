@@ -9,8 +9,6 @@ jQuery( document ).ready(function() {
     todayBtn: "linked",
     todayHighlight: true
   });
-  // Initialize Bootstrap-select
-  jQuery('.selectpicker').selectpicker();
   // Initialize Data Tables
   jQuery('.datatable').dataTable();
   // Initialize Popovers
