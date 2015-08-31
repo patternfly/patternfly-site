@@ -4,7 +4,7 @@ jQuery( document ).ready(function() {
   // Initialize Bootstrap Combobox
   jQuery('.combobox').combobox();
   // Initialize Bootstrap-datepicker
-  jQuery('.bootstrap-datepicker').datepicker({
+  jQuery('.bootstrap-datepicker, .input-group.date').datepicker({
     autoclose: true,
     todayBtn: "linked",
     todayHighlight: true
