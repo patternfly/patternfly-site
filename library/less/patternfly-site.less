@@ -465,7 +465,7 @@ header {
         &:hover {
           background: darken(#f6f6f6, 5%);
         }
-      } 
+      }
     }
     .container {
       @media (min-width: @screen-md) {
@@ -681,7 +681,7 @@ html {
       padding: @padding-base-vertical @padding-base-horizontal;
       vertical-align: middle;
       .transition(~"border-color ease-in-out .15s, box-shadow ease-in-out .15s");
-      @media (min-width: @grid-float-breakpoint) { 
+      @media (min-width: @grid-float-breakpoint) {
         width: 300px;
       }
       &:hover {
@@ -695,7 +695,7 @@ html {
       width: 100%;
     }
   }
-  h1 { 
+  h1 {
     padding-top: 20px;
     @media (min-width: @grid-float-breakpoint) {
       margin-left: 80px;
@@ -720,7 +720,7 @@ html {
   #login {
     padding: 0;
     width: auto;
-    @media (min-width: @grid-float-breakpoint) { 
+    @media (min-width: @grid-float-breakpoint) {
       bottom: 13%;
       position: absolute;
       width: 100%;
@@ -733,7 +733,7 @@ html {
       font-size: @font-size-base;
       font-weight: normal;
       &.submit {
-        @media (min-width: @grid-float-breakpoint) { 
+        @media (min-width: @grid-float-breakpoint) {
           width: 300px;
         }
         input {
@@ -871,7 +871,7 @@ html {
     line-height: 20px;
     padding: 17px 0 18px;
     margin: 25px 0 0;
-    width: 212px;
+    width: 205px;
     .page & {
       border-bottom: 1px solid #dfdfdf;
       border-top: 1px solid #dfdfdf;
@@ -1056,7 +1056,7 @@ th {
     text-indent: -9999px;
     width: 78px;
     .ie8 & {
-      background-image: url(/wp-content/themes/patternfly/library/img/redhat.png); 
+      background-image: url(/wp-content/themes/patternfly/library/img/redhat.png);
     }
   }
   p {
@@ -1084,7 +1084,7 @@ th {
   .navbar.navbar-default {
     .navbar-collapse .navbar-form {
       margin-bottom: 24px;
-      margin-right: -8px;
+      margin-right: 0;
       margin-top: 22px;
       padding-left: 10px;
       padding-right: 0;
@@ -1219,7 +1219,7 @@ th {
     }
   }
   .sidebar .menu {
-    width: 157px;
+    width: 150px;
   }
 }
 
@@ -1227,8 +1227,8 @@ th {
   .navbar.navbar-default .navbar-collapse .navbar-form .form-control:focus {
     width: 180px;
   }
-  .sidebar .menu{
-    width: 262px;
+  .sidebar .menu {
+    width: 255px;
   }
 }
 
@@ -1249,9 +1249,10 @@ th {
     position: static;
   }
   .sidebar .menu {
-    &.affix, &.affix-bottom {
-      position: static;
-      width: auto;
+    position: static;
+    width: auto;
+    .menu-item.pull-left {
+      clear: left;
     }
   }
 }

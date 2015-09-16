@@ -34,20 +34,32 @@ jQuery( document ).ready(function() {
       return val.replace('/widgets/', '')
     });
   });
+  (function sidebar() {
+    // Test to see if viewport is 768px or greater and...
+    if (matchMedia('(min-width: 768px)').matches) {
+      // Balance the columns so that weird affixing behavior doesn't occur when #main is shorter than #sidebar1
+      jQuery('#main, #sidebar1').matchHeight({
+          property: 'min-height'
+      });
+      // Affix the sidebar menu and show it--menu is hidden initally to avoid a flash of the expanded scrollspy
+      jQuery('.sidebar .menu').affix({
+        offset: {
+          top: 0,
+          bottom: function () {
+            return (this.bottom = jQuery('#widget-footer').outerHeight(true)+30)
+          }
+        }
+      }).show();
+    } else {
+      // show the sidebar menu
+      jQuery('.sidebar .menu').show();
+    }
+  })();
   // Enable scrollspy on sidebar nav
   // Add the necessary class to the menu
   jQuery(".menu-primary-container ul").addClass("nav");
   // And attach scrollspy
   jQuery('body').scrollspy({ target: '.menu-primary-container', offset: 100 });
-  // Affix the sidebar menu and show it--menu is hidden initally to avoid a flash of the expanded scrollspy 
-  jQuery('.sidebar .menu').affix({
-    offset: {
-      top: 0,
-      bottom: function () {
-        return (this.bottom = jQuery('#widget-footer').outerHeight(true)+30)
-      }
-    }
-  }).show();
   // refresh the scrollspy when opening/closing collapses
   jQuery('.collapse').on('shown.bs.collapse hidden.bs.collapse', function () {
     jQuery('body').scrollspy('refresh');

@@ -4,7 +4,7 @@ Author: Eddie Machado
 URL: htp://themble.com/bones/
 
 This is where you can drop your custom functions or
-just edit things like thumbnail sizes, header images, 
+just edit things like thumbnail sizes, header images,
 sidebars, comments, ect.
 */
 
@@ -78,8 +78,8 @@ add_image_size( 'wpbs-featured', 638, 300, true );
 add_image_size( 'wpbs-featured-home', 970, 311, true);
 add_image_size( 'wpbs-featured-carousel', 970, 400, true);
 
-/* 
-to add more sizes, simply copy a line from above 
+/*
+to add more sizes, simply copy a line from above
 and change the dimensions & name. As long as you
 upload a "featured image" as large as the biggest
 set width or height, all the other sizes will be
@@ -88,7 +88,7 @@ auto-cropped.
 To call a different size, simply change the text
 inside the thumbnail function.
 
-For example, to call the 300 x 300 sized image, 
+For example, to call the 300 x 300 sized image,
 we would use the function:
 <?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 for the 600 x 100 image:
@@ -130,24 +130,24 @@ function bones_register_sidebars() {
       'after_title' => '</h2>',
     ));
 
-    /* 
+    /*
     to add more sidebars or widgetized areas, just copy
-    and edit the above sidebar code. In order to call 
+    and edit the above sidebar code. In order to call
     your new sidebar just use the following code:
-    
+
     Just change the name to whatever your new
     sidebar's id is, for example:
-    
+
     To call the sidebar in your template, you can just copy
     the sidebar.php file and rename it to your sidebar's name.
     So using the above example, it would be:
     sidebar-sidebar2.php
-    
+
     */
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/
-    
+
 // Comment Layout
 function bones_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
@@ -180,7 +180,7 @@ function list_pings($comment, $args, $depth) {
        $GLOBALS['comment'] = $comment;
 ?>
         <li id="comment-<?php comment_ID(); ?>"><i class="icon icon-share-alt"></i>&nbsp;<?php comment_author_link(); ?>
-<?php 
+<?php
 
 }
 
@@ -201,7 +201,7 @@ function comment_count( $count ) {
 // Search Form
 function bones_wpsearch( $form ) {
   $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-   
+
       <div class="input-group">
   <input type="text" class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="Search the Site..." />
      <span class="input-group-btn">
@@ -289,7 +289,7 @@ function remove_thumbnail_dimensions( $html ) {
 }
 
 // Add the Meta Box to the homepage template
-function add_homepage_meta_box() {  
+function add_homepage_meta_box() {
   global $post;
 
   // Only add homepage meta box if template being used is the homepage template
@@ -298,71 +298,71 @@ function add_homepage_meta_box() {
   $template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
 
   if ( $template_file == 'page-homepage.php' ){
-      add_meta_box(  
-          'homepage_meta_box', // $id  
-          'Optional Homepage Tagline', // $title  
-          'show_homepage_meta_box', // $callback  
-          'page', // $page  
-          'normal', // $context  
-          'high'); // $priority  
+      add_meta_box(
+          'homepage_meta_box', // $id
+          'Optional Homepage Tagline', // $title
+          'show_homepage_meta_box', // $callback
+          'page', // $page
+          'normal', // $context
+          'high'); // $priority
     }
 }
 
 add_action( 'add_meta_boxes', 'add_homepage_meta_box' );
 
-// Field Array  
-$prefix = 'custom_';  
-$custom_meta_fields = array(  
-    array(  
-        'label'=> 'Homepage tagline area',  
-        'desc'  => 'Displayed underneath page title. Only used on homepage template. HTML can be used.',  
-        'id'    => $prefix.'tagline',  
-        'type'  => 'textarea' 
-    )  
-);  
+// Field Array
+$prefix = 'custom_';
+$custom_meta_fields = array(
+    array(
+        'label'=> 'Homepage tagline area',
+        'desc'  => 'Displayed underneath page title. Only used on homepage template. HTML can be used.',
+        'id'    => $prefix.'tagline',
+        'type'  => 'textarea'
+    )
+);
 
-// The Homepage Meta Box Callback  
-function show_homepage_meta_box() {  
+// The Homepage Meta Box Callback
+function show_homepage_meta_box() {
   global $custom_meta_fields, $post;
 
   // Use nonce for verification
   wp_nonce_field( basename( __FILE__ ), 'wpbs_nonce' );
-    
+
   // Begin the field table and loop
   echo '<table class="form-table">';
 
   foreach ( $custom_meta_fields as $field ) {
-      // get value of this field if it exists for this post  
-      $meta = get_post_meta($post->ID, $field['id'], true);  
-      // begin a table row with  
-      echo '<tr> 
-              <th><label for="'.$field['id'].'">'.$field['label'].'</label></th> 
-              <td>';  
-              switch($field['type']) {  
-                  // text  
-                  case 'text':  
-                      echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="60" /> 
-                          <br /><span class="description">'.$field['desc'].'</span>';  
+      // get value of this field if it exists for this post
+      $meta = get_post_meta($post->ID, $field['id'], true);
+      // begin a table row with
+      echo '<tr>
+              <th><label for="'.$field['id'].'">'.$field['label'].'</label></th>
+              <td>';
+              switch($field['type']) {
+                  // text
+                  case 'text':
+                      echo '<input type="text" name="'.$field['id'].'" id="'.$field['id'].'" value="'.$meta.'" size="60" />
+                          <br /><span class="description">'.$field['desc'].'</span>';
                   break;
-                  
-                  // textarea  
-                  case 'textarea':  
-                      echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="80" rows="4">'.$meta.'</textarea> 
-                          <br /><span class="description">'.$field['desc'].'</span>';  
-                  break;  
-              } //end switch  
-      echo '</td></tr>';  
-  } // end foreach  
-  echo '</table>'; // end table  
-}  
 
-// Save the Data  
-function save_homepage_meta( $post_id ) {  
+                  // textarea
+                  case 'textarea':
+                      echo '<textarea name="'.$field['id'].'" id="'.$field['id'].'" cols="80" rows="4">'.$meta.'</textarea>
+                          <br /><span class="description">'.$field['desc'].'</span>';
+                  break;
+              } //end switch
+      echo '</td></tr>';
+  } // end foreach
+  echo '</table>'; // end table
+}
 
-    global $custom_meta_fields;  
-  
-    // verify nonce  
-    if ( !isset( $_POST['wpbs_nonce'] ) || !wp_verify_nonce($_POST['wpbs_nonce'], basename(__FILE__)) )  
+// Save the Data
+function save_homepage_meta( $post_id ) {
+
+    global $custom_meta_fields;
+
+    // verify nonce
+    if ( !isset( $_POST['wpbs_nonce'] ) || !wp_verify_nonce($_POST['wpbs_nonce'], basename(__FILE__)) )
         return $post_id;
 
     // check autosave
@@ -376,8 +376,8 @@ function save_homepage_meta( $post_id ) {
         } elseif ( !current_user_can( 'edit_post', $post_id ) ) {
             return $post_id;
     }
-  
-    // loop through fields and save the data  
+
+    // loop through fields and save the data
     foreach ( $custom_meta_fields as $field ) {
         $old = get_post_meta( $post_id, $field['id'], true );
         $new = $_POST[$field['id']];
@@ -412,130 +412,130 @@ add_filter( 'wp_get_attachment_link', 'add_class_attachment_link', 10, 1 );
 add_filter( 'the_content', 'first_paragraph' );
 */
 // Menu output mods
-/* Bootstrap_Walker for Wordpress 
-     * Author: George Huger, Illuminati Karate, Inc 
-     * More Info: http://illuminatikarate.com/blog/bootstrap-walker-for-wordpress 
-     * 
-     * Formats a Wordpress menu to be used as a Bootstrap dropdown menu (http://getbootstrap.com). 
-     * 
-     * Specifically, it makes these changes to the normal Wordpress menu output to support Bootstrap: 
-     * 
-     *        - adds a 'dropdown' class to level-0 <li>'s which contain a dropdown 
-     *         - adds a 'dropdown-submenu' class to level-1 <li>'s which contain a dropdown 
-     *         - adds the 'dropdown-menu' class to level-1 and level-2 <ul>'s 
-     * 
-     * Supports menus up to 3 levels deep. 
-     *  
-     */ 
-    class Bootstrap_Walker extends Walker_Nav_Menu 
-    {     
- 
-        /* Start of the <ul> 
-         * 
-         * Note on $depth: Counterintuitively, $depth here means the "depth right before we start this menu".  
-         *                   So basically add one to what you'd expect it to be 
-         */         
-        function start_lvl(&$output, $depth) 
+/* Bootstrap_Walker for Wordpress
+     * Author: George Huger, Illuminati Karate, Inc
+     * More Info: http://illuminatikarate.com/blog/bootstrap-walker-for-wordpress
+     *
+     * Formats a Wordpress menu to be used as a Bootstrap dropdown menu (http://getbootstrap.com).
+     *
+     * Specifically, it makes these changes to the normal Wordpress menu output to support Bootstrap:
+     *
+     *        - adds a 'dropdown' class to level-0 <li>'s which contain a dropdown
+     *         - adds a 'dropdown-submenu' class to level-1 <li>'s which contain a dropdown
+     *         - adds the 'dropdown-menu' class to level-1 and level-2 <ul>'s
+     *
+     * Supports menus up to 3 levels deep.
+     *
+     */
+    class Bootstrap_Walker extends Walker_Nav_Menu
+    {
+
+        /* Start of the <ul>
+         *
+         * Note on $depth: Counterintuitively, $depth here means the "depth right before we start this menu".
+         *                   So basically add one to what you'd expect it to be
+         */
+        function start_lvl(&$output, $depth)
         {
-            $tabs = str_repeat("\t", $depth); 
-            // If we are about to start the first submenu, we need to give it a dropdown-menu class 
-            if ($depth == 0 || $depth == 1) { //really, level-1 or level-2, because $depth is misleading here (see note above) 
-                $output .= "\n{$tabs}<ul class=\"dropdown-menu\">\n"; 
-            } else { 
-                $output .= "\n{$tabs}<ul>\n"; 
-            } 
+            $tabs = str_repeat("\t", $depth);
+            // If we are about to start the first submenu, we need to give it a dropdown-menu class
+            if ($depth == 0 || $depth == 1) { //really, level-1 or level-2, because $depth is misleading here (see note above)
+                $output .= "\n{$tabs}<ul class=\"dropdown-menu\">\n";
+            } else {
+                $output .= "\n{$tabs}<ul>\n";
+            }
             return;
-        } 
- 
-        /* End of the <ul> 
-         * 
-         * Note on $depth: Counterintuitively, $depth here means the "depth right before we start this menu".  
-         *                   So basically add one to what you'd expect it to be 
-         */         
-        function end_lvl(&$output, $depth)  
+        }
+
+        /* End of the <ul>
+         *
+         * Note on $depth: Counterintuitively, $depth here means the "depth right before we start this menu".
+         *                   So basically add one to what you'd expect it to be
+         */
+        function end_lvl(&$output, $depth)
         {
-            if ($depth == 0) { // This is actually the end of the level-1 submenu ($depth is misleading here too!) 
- 
-                // we don't have anything special for Bootstrap, so we'll just leave an HTML comment for now 
-                $output .= '<!--.dropdown-->'; 
-            } 
-            $tabs = str_repeat("\t", $depth); 
-            $output .= "\n{$tabs}</ul>\n"; 
-            return; 
+            if ($depth == 0) { // This is actually the end of the level-1 submenu ($depth is misleading here too!)
+
+                // we don't have anything special for Bootstrap, so we'll just leave an HTML comment for now
+                $output .= '<!--.dropdown-->';
+            }
+            $tabs = str_repeat("\t", $depth);
+            $output .= "\n{$tabs}</ul>\n";
+            return;
         }
- 
-        /* Output the <li> and the containing <a> 
-         * Note: $depth is "correct" at this level 
-         */         
-        function start_el(&$output, $item, $depth, $args)  
-        {    
-            global $wp_query; 
-            $indent = ( $depth ) ? str_repeat( "\t", $depth ) : ''; 
-            $class_names = $value = ''; 
-            $classes = empty( $item->classes ) ? array() : (array) $item->classes; 
- 
-            /* If this item has a dropdown menu, add the 'dropdown' class for Bootstrap */ 
-            if ($item->hasChildren) { 
-                $classes[] = 'dropdown'; 
-                // level-1 menus also need the 'dropdown-submenu' class 
-                if($depth == 1) { 
-                    $classes[] = 'dropdown-submenu'; 
-                } 
-            } 
- 
-            /* This is the stock Wordpress code that builds the <li> with all of its attributes */ 
-            $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) ); 
-            $class_names = ' class="' . esc_attr( $class_names ) . '"'; 
-            $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';             
-            $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : ''; 
-            $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : ''; 
-            $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : ''; 
-            $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : ''; 
-            $item_output = $args->before; 
- 
-            /* If this item has a dropdown menu, make clicking on this link toggle it */ 
-            if ($item->hasChildren && $depth == 0) { 
-                $item_output .= '<a'. $attributes .' class="dropdown-toggle" data-toggle="dropdown">'; 
-            } else { 
-                $item_output .= '<a'. $attributes .'>'; 
-            } 
- 
-            $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after; 
- 
-            /* Output the actual caret for the user to click on to toggle the menu */             
-            if ($item->hasChildren && $depth == 0) { 
-                $item_output .= '<b class="caret"></b></a>'; 
-            } else { 
-                $item_output .= '</a>'; 
-            } 
- 
-            $item_output .= $args->after; 
-            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args ); 
-            return; 
+
+        /* Output the <li> and the containing <a>
+         * Note: $depth is "correct" at this level
+         */
+        function start_el(&$output, $item, $depth, $args)
+        {
+            global $wp_query;
+            $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+            $class_names = $value = '';
+            $classes = empty( $item->classes ) ? array() : (array) $item->classes;
+
+            /* If this item has a dropdown menu, add the 'dropdown' class for Bootstrap */
+            if ($item->hasChildren) {
+                $classes[] = 'dropdown';
+                // level-1 menus also need the 'dropdown-submenu' class
+                if($depth == 1) {
+                    $classes[] = 'dropdown-submenu';
+                }
+            }
+
+            /* This is the stock Wordpress code that builds the <li> with all of its attributes */
+            $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
+            $class_names = ' class="' . esc_attr( $class_names ) . '"';
+            $output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
+            $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+            $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+            $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+            $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+            $item_output = $args->before;
+
+            /* If this item has a dropdown menu, make clicking on this link toggle it */
+            if ($item->hasChildren && $depth == 0) {
+                $item_output .= '<a'. $attributes .' class="dropdown-toggle" data-toggle="dropdown">';
+            } else {
+                $item_output .= '<a'. $attributes .'>';
+            }
+
+            $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+
+            /* Output the actual caret for the user to click on to toggle the menu */
+            if ($item->hasChildren && $depth == 0) {
+                $item_output .= '<b class="caret"></b></a>';
+            } else {
+                $item_output .= '</a>';
+            }
+
+            $item_output .= $args->after;
+            $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+            return;
         }
- 
-        /* Close the <li> 
-         * Note: the <a> is already closed 
-         * Note 2: $depth is "correct" at this level 
-         */         
+
+        /* Close the <li>
+         * Note: the <a> is already closed
+         * Note 2: $depth is "correct" at this level
+         */
         function end_el (&$output, $item, $depth, $args)
         {
-            $output .= '</li>'; 
+            $output .= '</li>';
             return;
-        } 
- 
-        /* Add a 'hasChildren' property to the item 
-         * Code from: http://wordpress.org/support/topic/how-do-i-know-if-a-menu-item-has-children-or-is-a-leaf#post-3139633  
-         */ 
-        function display_element ($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) 
-        { 
-            // check whether this item has children, and set $item->hasChildren accordingly 
-            $element->hasChildren = isset($children_elements[$element->ID]) && !empty($children_elements[$element->ID]); 
- 
-            // continue with normal behavior 
-            return parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output); 
-        }         
-    } 
+        }
+
+        /* Add a 'hasChildren' property to the item
+         * Code from: http://wordpress.org/support/topic/how-do-i-know-if-a-menu-item-has-children-or-is-a-leaf#post-3139633
+         */
+        function display_element ($element, &$children_elements, $max_depth, $depth = 0, $args, &$output)
+        {
+            // check whether this item has children, and set $item->hasChildren accordingly
+            $element->hasChildren = isset($children_elements[$element->ID]) && !empty($children_elements[$element->ID]);
+
+            // continue with normal behavior
+            return parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
+        }
+    }
 add_editor_style('editor-style.css');
 
 // Add Twitter Bootstrap's standard 'active' class name to the active nav link item
@@ -545,13 +545,13 @@ function add_active_class($classes, $item) {
   if( $item->menu_item_parent == 0 && in_array('current-menu-item', $classes) ) {
     $classes[] = "active";
   }
-  
+
   return $classes;
 }
 
 // enqueue styles
-if( !function_exists("theme_styles") ) {  
-    function theme_styles() { 
+if( !function_exists("theme_styles") ) {
+    function theme_styles() {
         // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
         wp_register_style( 'patternfly-adjusted', get_template_directory_uri() . '/library/css/patternfly-adjusted.min.css', array(), '1.0', 'all' );
         wp_register_style( 'patternfly-additions', get_template_directory_uri() . '/library/components/patternfly/dist/css/patternfly-additions.min.css', array(), '1.0', 'all' );
@@ -567,67 +567,77 @@ if( !function_exists("theme_styles") ) {
 add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 // enqueue javascript
-if( !function_exists( "theme_js" ) ) {  
+if( !function_exists( "theme_js" ) ) {
   function theme_js(){
-  
-    wp_register_script( 'bootstrap', 
-      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap/dist/js/bootstrap.min.js', 
-      array('jquery'), 
+
+    wp_register_script( 'bootstrap',
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap/dist/js/bootstrap.min.js',
+      array('jquery'),
       '3.3.5' );
 
-    wp_register_script( 'bootstrap-combobox', 
-      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-combobox/js/bootstrap-combobox.js', 
-      array('jquery'), 
+    wp_register_script( 'bootstrap-combobox',
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-combobox/js/bootstrap-combobox.js',
+      array('jquery'),
       '1.1.6' );
 
-    wp_register_script( 'bootstrap-datepicker', 
-      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js', 
-      array('jquery'), 
+    wp_register_script( 'bootstrap-datepicker',
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
+      array('jquery'),
       '1.4.0' );
 
-    wp_register_script( 'bootstrap-select', 
-      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-select/dist/js/bootstrap-select.min.js', 
-      array('jquery'), 
+    wp_register_script( 'bootstrap-select',
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-select/dist/js/bootstrap-select.min.js',
+      array('jquery'),
       '1.7.3' );
 
-    wp_register_script( 'bootstrap-treeview', 
-      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js', 
-      array('jquery'), 
+    wp_register_script( 'bootstrap-treeview',
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js',
+      array('jquery'),
       '1.2.0' );
 
-    wp_register_script( 'c3', 
-      get_template_directory_uri() . '/library/components/patternfly/components/c3/c3.min.js', 
-      array('jquery'), 
+    wp_register_script( 'c3',
+      get_template_directory_uri() . '/library/components/patternfly/components/c3/c3.min.js',
+      array('jquery'),
       '0.4.10' );
 
-    wp_register_script( 'd3', 
-      get_template_directory_uri() . '/library/components/patternfly/components/d3/d3.min.js', 
-      array('jquery'), 
+    wp_register_script( 'd3',
+      get_template_directory_uri() . '/library/components/patternfly/components/d3/d3.min.js',
+      array('jquery'),
       '3.5.0' );
 
-    wp_register_script( 'datatables', 
-      get_template_directory_uri() . '/library/components/patternfly/components/datatables/media/js/jquery.dataTables.js', 
-      array('jquery'), 
+    wp_register_script( 'datatables',
+      get_template_directory_uri() . '/library/components/patternfly/components/datatables/media/js/jquery.dataTables.js',
+      array('jquery'),
       '1.10.7' );
 
-    wp_register_script( 'google-code-prettify', 
-      get_template_directory_uri() . '/library/components/patternfly/components/google-code-prettify/bin/prettify.min.js', 
-      array('jquery'), 
+    wp_register_script( 'google-code-prettify',
+      get_template_directory_uri() . '/library/components/patternfly/components/google-code-prettify/bin/prettify.min.js',
+      array('jquery'),
       '1.0.4' );
 
-    wp_register_script( 'patternfly', 
-      get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js', 
-      array('jquery'), 
+    wp_register_script( 'matchHeight',
+      get_template_directory_uri() . '/library/components/patternfly/components/matchHeight/jquery.matchHeight-min.js',
+      array('jquery'),
+      '0.6.0' );
+
+    wp_register_script( 'matchMedia',
+      get_template_directory_uri() . '/library/components/matchMedia/matchMedia.js',
+      array('jquery'),
+      '0.6.0' );
+
+    wp_register_script( 'patternfly',
+      get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js',
+      array('jquery'),
       '2.0.0' );
 
-    wp_register_script( 'pf', 
-      get_template_directory_uri() . '/library/js/pf.js', 
-      array('jquery'), 
+    wp_register_script( 'pf',
+      get_template_directory_uri() . '/library/js/pf.js',
+      array('jquery'),
       '2.0.0' );
 
-    wp_register_script( 'wpbs-scripts', 
-      get_template_directory_uri() . '/library/js/scripts.js', 
-      array('jquery'), 
+    wp_register_script( 'wpbs-scripts',
+      get_template_directory_uri() . '/library/js/scripts.js',
+      array('jquery'),
       '1.2' );
 
     wp_enqueue_script('bootstrap');
@@ -639,6 +649,8 @@ if( !function_exists( "theme_js" ) ) {
     wp_enqueue_script('d3');
     wp_enqueue_script('datatables');
     wp_enqueue_script('google-code-prettify');
+    wp_enqueue_script('matchHeight');
+    wp_enqueue_script('matchMedia');
     wp_enqueue_script('patternfly');
     wp_enqueue_script('wpbs-scripts');
     // call pf last since it initializes widgets
@@ -654,52 +666,52 @@ function get_wpbs_theme_options(){
       $heading_typography = of_get_option( 'heading_typography' );
       if ( $heading_typography['face'] != 'Default' ) {
         $theme_options_styles .= '
-        h1, h2, h3, h4, h5, h6{ 
-          font-family: ' . $heading_typography['face'] . '; 
-          font-weight: ' . $heading_typography['style'] . '; 
-          color: ' . $heading_typography['color'] . '; 
+        h1, h2, h3, h4, h5, h6{
+          font-family: ' . $heading_typography['face'] . ';
+          font-weight: ' . $heading_typography['style'] . ';
+          color: ' . $heading_typography['color'] . ';
         }';
       }
-      
+
       $main_body_typography = of_get_option( 'main_body_typography' );
       if ( $main_body_typography['face'] != 'Default' ) {
         $theme_options_styles .= '
-        body{ 
-          font-family: ' . $main_body_typography['face'] . '; 
-          font-weight: ' . $main_body_typography['style'] . '; 
-          color: ' . $main_body_typography['color'] . '; 
+        body{
+          font-family: ' . $main_body_typography['face'] . ';
+          font-weight: ' . $main_body_typography['style'] . ';
+          color: ' . $main_body_typography['color'] . ';
         }';
       }
-      
+
       $link_color = of_get_option( 'link_color' );
       if ($link_color) {
         $theme_options_styles .= '
-        a{ 
-          color: ' . $link_color . '; 
+        a{
+          color: ' . $link_color . ';
         }';
       }
-      
+
       $link_hover_color = of_get_option( 'link_hover_color' );
       if ($link_hover_color) {
         $theme_options_styles .= '
-        a:hover{ 
-          color: ' . $link_hover_color . '; 
+        a:hover{
+          color: ' . $link_hover_color . ';
         }';
       }
-      
+
       $link_active_color = of_get_option( 'link_active_color' );
       if ($link_active_color) {
         $theme_options_styles .= '
-        a:active{ 
-          color: ' . $link_active_color . '; 
+        a:active{
+          color: ' . $link_active_color . ';
         }';
       }
       */
       $topbar_position = of_get_option( 'nav_position' );
       if ($topbar_position == 'scroll') {
         $theme_options_styles .= '
-        .navbar{ 
-          position: static; 
+        .navbar{
+          position: static;
         }
         body{
           padding-top: 0;
@@ -707,24 +719,24 @@ function get_wpbs_theme_options(){
         #content {
           padding-top: 27px;
         }
-        ' 
+        '
         ;
       }
-      
+
       $topbar_bg_color = of_get_option( 'top_nav_bg_color' );
       $use_gradient = of_get_option( 'showhidden_gradient' );
 
       if ( $topbar_bg_color && !$use_gradient ) {
         $theme_options_styles .= '
-        .navbar-inner, .navbar .fill { 
+        .navbar-inner, .navbar .fill {
           background-color: '. $topbar_bg_color . ';
           background-image: none;
         }' . $topbar_bg_color;
       }
-      
+
       if ( $use_gradient ) {
         $topbar_bottom_gradient_color = of_get_option( 'top_nav_bottom_gradient_color' );
-      
+
         $theme_options_styles .= '
         .navbar-inner, .navbar .fill {
           background-image: -khtml-gradient(linear, left top, left bottom, from(' . $topbar_bg_color . '), to('. $topbar_bottom_gradient_color . '));
@@ -738,24 +750,24 @@ function get_wpbs_theme_options(){
         }';
       }
       else{
-      } 
-      
+      }
+
       $topbar_link_color = of_get_option( 'top_nav_link_color' );
       if ( $topbar_link_color ) {
         $theme_options_styles .= '
-        .navbar .nav li a { 
+        .navbar .nav li a {
           color: '. $topbar_link_color . ';
         }';
       }
-      
+
       $topbar_link_hover_color = of_get_option( 'top_nav_link_hover_color' );
       if ( $topbar_link_hover_color ) {
         $theme_options_styles .= '
-        .navbar .nav li a:hover { 
+        .navbar .nav li a:hover {
           color: '. $topbar_link_hover_color . ';
         }';
       }
-      
+
       $topbar_dropdown_hover_bg_color = of_get_option( 'top_nav_dropdown_hover_bg' );
       if ( $topbar_dropdown_hover_bg_color ) {
         $theme_options_styles .= '
@@ -764,7 +776,7 @@ function get_wpbs_theme_options(){
           }
         ';
       }
-      
+
       $topbar_dropdown_item_color = of_get_option( 'top_nav_dropdown_item' );
       if ( $topbar_dropdown_item_color ){
         $theme_options_styles .= '
@@ -773,15 +785,15 @@ function get_wpbs_theme_options(){
           }
         ';
       }
-      
+
       $hero_unit_bg_color = of_get_option( 'hero_unit_bg_color' );
       if ( $hero_unit_bg_color ) {
         $theme_options_styles .= '
-        .hero-unit { 
+        .hero-unit {
           background-color: '. $hero_unit_bg_color . ';
         }';
       }
-      
+
       $suppress_comments_message = of_get_option( 'suppress_comments_message' );
       if ( $suppress_comments_message ){
         $theme_options_styles .= '
@@ -789,21 +801,21 @@ function get_wpbs_theme_options(){
           border-bottom: none;
         }';
       }
-      
+
       $additional_css = of_get_option( 'wpbs_css' );
       if( $additional_css ){
         $theme_options_styles .= $additional_css;
       }
-          
+
       if( $theme_options_styles ){
-        echo '<style>' 
+        echo '<style>'
         . $theme_options_styles . '
         </style>';
       }
-    
+
       $bootstrap_theme = of_get_option( 'wpbs_theme' );
       $use_theme = of_get_option( 'showhidden_themes' );
-      
+
       if( $bootstrap_theme && $use_theme ){
         if( $bootstrap_theme == 'default' ){}
         else {

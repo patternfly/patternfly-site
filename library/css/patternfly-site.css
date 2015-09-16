@@ -970,7 +970,7 @@ body.admin-bar .post_content p[id] {
   line-height: 20px;
   padding: 17px 0 18px;
   margin: 25px 0 0;
-  width: 212px;
+  width: 205px;
 }
 .page .sidebar .menu {
   border-bottom: 1px solid #dfdfdf;
@@ -1176,7 +1176,7 @@ th {
 @media (min-width: 992px) {
   .navbar.navbar-default .navbar-collapse .navbar-form {
     margin-bottom: 24px;
-    margin-right: -8px;
+    margin-right: 0;
     margin-top: 22px;
     padding-left: 10px;
     padding-right: 0;
@@ -1292,7 +1292,7 @@ th {
     padding: 7px 20px;
   }
   .sidebar .menu {
-    width: 157px;
+    width: 150px;
   }
 }
 @media (min-width: 1200px) {
@@ -1300,7 +1300,7 @@ th {
     width: 180px;
   }
   .sidebar .menu {
-    width: 262px;
+    width: 255px;
   }
 }
 @media (max-width: 991px) {
@@ -1317,10 +1317,12 @@ th {
   .navbar-fixed-top {
     position: static;
   }
-  .sidebar .menu.affix,
-  .sidebar .menu.affix-bottom {
+  .sidebar .menu {
     position: static;
     width: auto;
+  }
+  .sidebar .menu .menu-item.pull-left {
+    clear: left;
   }
 }
 @media (max-width: 600px) {
