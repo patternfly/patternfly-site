@@ -590,6 +590,16 @@ if( !function_exists( "theme_js" ) ) {
       array('jquery'),
       '1.7.3' );
 
+    wp_register_script( 'bootstrap-switch',
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-switch/dist/js/bootstrap-switch.min.js',
+      array('jquery'),
+      '3.3.2' );
+
+    wp_register_script( 'bootstrap-touchspin',
+      get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js',
+      array('jquery'),
+      '3.0.3' );
+
     wp_register_script( 'bootstrap-treeview',
       get_template_directory_uri() . '/library/components/patternfly/components/bootstrap-treeview/dist/bootstrap-treeview.min.js',
       array('jquery'),
@@ -644,6 +654,8 @@ if( !function_exists( "theme_js" ) ) {
     wp_enqueue_script('bootstrap-combobox');
     wp_enqueue_script('bootstrap-datepicker');
     wp_enqueue_script('bootstrap-select');
+    wp_enqueue_script('bootstrap-switch');
+    wp_enqueue_script('bootstrap-touchspin');
     wp_enqueue_script('bootstrap-treeview');
     wp_enqueue_script('c3');
     wp_enqueue_script('d3');

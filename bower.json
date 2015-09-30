@@ -25,6 +25,6 @@
     "zeroclipboard": "~1.3.5"
   },
   "devDependencies": {
-    "patternfly": "~2.2.0"
+    "patternfly": "~2.3.0"
   }
 }
