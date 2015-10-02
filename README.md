@@ -28,8 +28,6 @@ This will install all necessary development packages into `node_modules/`. At th
 
 ### CSS
 
-In development, styling is written and managed through multiple lesscss files. In order to generate a CSS file of all styling, run the build Gruntjs task:
+In development, styling is written and managed through multiple lesscss files. In order to generate the CSS files of all styling, run the build Gruntjs task:
 
     grunt build
-
-This task will compile and minify the lesscss files into a single CSS file located at `library/css/bootstrap-custom.min.css`.
