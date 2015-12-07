@@ -1230,6 +1230,9 @@ th {
     color: #ffffff;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   }
+  .navbar.navbar-default .navbar-right > li.dropdown > .dropdown-menu .dropdown-submenu > .dropdown-menu a {
+    white-space: normal;
+  }
   .navbar.navbar-default .navbar-right > li.dropdown > .dropdown-menu li > a:hover {
     background-color: #d4edfa;
     border-color: #b3d3e7;
