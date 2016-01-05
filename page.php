@@ -7,7 +7,6 @@
             <header>
               <div class="page-header">
                 <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-                <p class="updated">Last updated: <?php the_date('Y/m/d g:i:s A T'); ?></p>
               </div>
             </header> <!-- end article header -->
             <section class="post_content clearfix" itemprop="articleBody">
@@ -18,7 +17,7 @@
             </footer> <!-- end article footer -->
           </article> <!-- end article -->
           <?php comments_template('',true); ?>
-          <?php endwhile; ?> 
+          <?php endwhile; ?>
           <?php else : ?>
           <article id="post-not-found">
               <header>
