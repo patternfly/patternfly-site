@@ -70,6 +70,6 @@ module.exports = function(grunt) {
     }
   });
   grunt.registerTask('build', ['less', 'cssmin', 'csscount']);
-  grunt.registerTask('server', ['watch']);
+  grunt.registerTask('server', ['build', 'watch']);
   grunt.registerTask('default', ['build']);
 };
