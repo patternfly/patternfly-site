@@ -638,7 +638,7 @@ if( !function_exists( "theme_js" ) ) {
     wp_register_script( 'patternfly',
       get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js',
       array('jquery'),
-      '2.0.0' );
+      '3.0.0' );
 
     wp_register_script( 'pf',
       get_template_directory_uri() . '/library/js/pf.js',
