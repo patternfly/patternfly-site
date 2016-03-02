@@ -1,6 +1,6 @@
 {
   "name": "patternfly",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "authors": "Red Hat",
   "license": "Apache-2.0",
   "homepage": "https://www.patternfly.org",
@@ -37,13 +37,13 @@
     "jquery": "2.1.4",
     "matchHeight": "0.6.0"
   },
-  "_release": "3.1.0",
+  "_release": "3.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "v3.1.0",
-    "commit": "101a22341ca8e6c337840901dc161101e6e2632d"
+    "tag": "v3.2.0",
+    "commit": "c26720e94a9f4680063c42fdbd0301b3454cf603"
   },
   "_source": "git://github.com/patternfly/patternfly.git",
-  "_target": "3.1.0",
+  "_target": "3.2.0",
   "_originalSource": "patternfly"
 }
