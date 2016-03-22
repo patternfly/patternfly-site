@@ -585,6 +585,16 @@ if( !function_exists( "theme_js" ) ) {
       array('jquery'),
       '1.4.0' );
 
+    wp_register_script( 'bootstrap-datetimepicker',
+      get_template_directory_uri() . '/library/components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js',
+      array('jquery'),
+      '4.17.37' );
+
+    wp_register_script( 'moment',
+      get_template_directory_uri() . '/library/components/moment/moment.js',
+      array('jquery'),
+      '2.11.2' );
+
     wp_register_script( 'bootstrap-select',
       get_template_directory_uri() . '/library/components/bootstrap-select/dist/js/bootstrap-select.min.js',
       array('jquery'),
@@ -636,9 +646,7 @@ if( !function_exists( "theme_js" ) ) {
       '0.6.0' );
 
     wp_register_script( 'patternfly',
-      get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js',
-      array('jquery'),
-      '3.0.0' );
+      get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js', array('jquery'), '3.3.1' );
 
     wp_register_script( 'pf',
       get_template_directory_uri() . '/library/js/pf.js',
