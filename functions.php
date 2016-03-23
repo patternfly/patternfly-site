@@ -661,6 +661,8 @@ if( !function_exists( "theme_js" ) ) {
     wp_enqueue_script('bootstrap');
     wp_enqueue_script('bootstrap-combobox');
     wp_enqueue_script('bootstrap-datepicker');
+    wp_enqueue_script('moment');
+    wp_enqueue_script('bootstrap-datetimepicker');
     wp_enqueue_script('bootstrap-select');
     wp_enqueue_script('bootstrap-switch');
     wp_enqueue_script('bootstrap-touchspin');
