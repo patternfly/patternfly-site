@@ -646,7 +646,7 @@ if( !function_exists( "theme_js" ) ) {
       '0.6.0' );
 
     wp_register_script( 'patternfly',
-      get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js', array('jquery'), '3.3.4' );
+      get_template_directory_uri() . '/library/components/patternfly/dist/js/patternfly.js', array('jquery'), '3.3.5' );
 
     wp_register_script( 'pf',
       get_template_directory_uri() . '/library/js/pf.js',
