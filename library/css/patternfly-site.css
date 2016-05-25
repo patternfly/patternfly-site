@@ -12,13 +12,13 @@ body {
   max-width: 100%;
 }
 .collapse-toggle {
-  color: #0099d3;
+  color: #0088ce;
   padding-left: 12px;
   position: relative;
 }
 .collapse-toggle:after {
   border: 4px solid transparent;
-  border-top-color: #0099d3;
+  border-top-color: #0088ce;
   border-bottom-width: 0;
   content: '';
   height: 0;
@@ -29,21 +29,21 @@ body {
   width: 0;
 }
 .collapse-toggle:hover {
-  color: #00618a;
+  color: #00659c;
 }
 .collapse-toggle:hover:after {
-  border-top-color: #00618a;
+  border-top-color: #00659c;
 }
 .collapse-toggle.collapsed:after {
   border-bottom-width: 4px;
-  border-left-color: #0099d3;
+  border-left-color: #0088ce;
   border-top-color: transparent;
   border-right-width: 0;
   left: 2px;
   top: 30%;
 }
 .collapse-toggle.collapsed:hover:after {
-  border-left-color: #00618a;
+  border-left-color: #00659c;
 }
 #comments {
   margin-top: 20px;
@@ -523,7 +523,7 @@ html #wpadminbar {
   margin: 0 0 7px;
 }
 .icons .zeroclipboard-is-hover {
-  color: #0099d3;
+  color: #0088ce;
 }
 .incsub_wiki #btn_save {
   background-color: #eee;
@@ -641,6 +641,7 @@ html #wpadminbar {
   }
 }
 .login form {
+  /* background-color: @login-container-bg-color; removed from patternfly */
   background-color: #181818;
   background-color: rgba(255, 255, 255, 0.055);
   -webkit-box-shadow: none;
@@ -662,13 +663,13 @@ html #wpadminbar {
 }
 .login form input[type=submit] {
   border-radius: 1px;
-  background-color: #0085cf;
-  background-image: -webkit-linear-gradient(top, #00a8e1 0%, #0085cf 100%);
-  background-image: -o-linear-gradient(top, #00a8e1 0%, #0085cf 100%);
-  background-image: linear-gradient(to bottom, #00a8e1 0%, #0085cf 100%);
+  background-color: #0088ce;
+  background-image: -webkit-linear-gradient(top, #39a5dc 0%, #0088ce 100%);
+  background-image: -o-linear-gradient(top, #39a5dc 0%, #0088ce 100%);
+  background-image: linear-gradient(to bottom, #39a5dc 0%, #0088ce 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff00a8e1', endColorstr='#ff0085cf', GradientType=0);
-  border-color: #006e9c;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff39a5dc', endColorstr='#ff0088ce', GradientType=0);
+  border-color: #00659c;
   color: #fff;
   font-size: 12px !important;
   height: 30px !important;
@@ -681,9 +682,9 @@ html #wpadminbar {
 .login form input[type=submit]:active,
 .login form input[type=submit].active,
 .open .dropdown-toggle.login form input[type=submit] {
-  background-color: #0085cf;
+  background-color: #0088ce;
   background-image: none;
-  border-color: #006e9c;
+  border-color: #00659c;
   color: #fff;
 }
 .login form input[type=submit]:active,
@@ -700,8 +701,8 @@ html #wpadminbar {
 .login form input[type=submit]:active.focus,
 .login form input[type=submit].active.focus,
 .open .dropdown-toggle.login form input[type=submit].focus {
-  background-color: #0075b6;
-  border-color: #005578;
+  background-color: #0077b5;
+  border-color: #004e78;
 }
 .login form input[type=submit].disabled,
 .login form input[type=submit][disabled],
@@ -718,8 +719,8 @@ fieldset[disabled] .login form input[type=submit]:active,
 .login form input[type=submit].disabled.active,
 .login form input[type=submit][disabled].active,
 fieldset[disabled] .login form input[type=submit].active {
-  background-color: #0085cf;
-  border-color: #006e9c;
+  background-color: #0088ce;
+  border-color: #00659c;
 }
 .login form input[type=submit]:active {
   -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -745,9 +746,9 @@ fieldset[disabled] .login form input[type=submit].active {
   background-image: none;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  border: 1px solid #BABABA;
+  border: 1px solid #bbb;
   border-radius: 1px;
-  color: #333333;
+  color: #363636;
   display: block;
   font-size: 12px;
   height: 26px;
@@ -799,7 +800,7 @@ fieldset[disabled] .login form input[type=submit].active {
   }
 }
 .login #pass-strength-result {
-  color: #333333;
+  color: #363636;
   margin-top: 0;
 }
 .login #login {
@@ -868,14 +869,14 @@ fieldset[disabled] .login form input[type=submit].active {
   }
 }
 .login #nav a {
-  color: #0099d3;
+  color: #0088ce;
 }
 .login #nav a:hover {
-  color: #3ac9ff;
+  color: #35baff;
   text-decoration: underline;
 }
 .meta {
-  color: #999999;
+  color: #9c9c9c;
   font-size: 11px;
 }
 .page-header {
@@ -1049,7 +1050,7 @@ body.admin-bar .post_content p[id] {
   padding: 0;
 }
 #sidebar2 .advanced_recent_posts_widget .post-date {
-  color: #999999;
+  color: #9c9c9c;
   display: inline-block;
   float: right;
   font-size: 11px;
@@ -1219,7 +1220,7 @@ th {
   .navbar.navbar-default .navbar-right > li.dropdown > .dropdown-menu > .current-menu-parent > a:hover,
   .navbar.navbar-default .navbar-right > li.dropdown > .dropdown-menu .current-menu-item > a:focus,
   .navbar.navbar-default .navbar-right > li.dropdown > .dropdown-menu > .current-menu-parent > a:focus {
-    background-color: #0099d3;
+    background-color: #0088ce;
     border-color: #0076b7;
     color: #fff;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -1228,12 +1229,12 @@ th {
     white-space: normal;
   }
   .navbar.navbar-default .navbar-right > li.dropdown > .dropdown-menu li > a:hover {
-    background-color: #d4edfa;
+    background-color: #def3ff;
     border-color: #b3d3e7;
   }
   .navbar.navbar-default .navbar-right > li.dropdown > .dropdown-menu li > a:focus,
   .navbar.navbar-default .navbar-right > li.dropdown > .dropdown-menu li > a:active {
-    background-color: #0099d3;
+    background-color: #0088ce;
     border-color: #0076b7;
     color: #fff;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
