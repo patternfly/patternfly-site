@@ -1,4 +1,17 @@
 <div class="jumbotron">
+  <div class="container-fluid">
+    <div class="countdown">
+      <span>New site launches in: </span>
+      <div><h1 id="clock"></h1></div>
+      <span>Can’t wait? Check out the <a href="http://beta.patternfly.org">beta</a>.</span>
+      <script src="components/jquery.countdown/dist/jquery.countdown.js"></script>
+      <script type="text/javascript">
+        jQuery('#clock').countdown('2016/06/15', function(event) {
+          jQuery(this).html(event.strftime('%D days %H:%M:%S'));
+        });
+      </script>
+    </div>
+  </div>
   <div class="container">
     <!--[if IE 8]>
       <div class="alert alert-warning" role="alert">
