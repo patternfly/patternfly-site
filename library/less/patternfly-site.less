@@ -401,6 +401,37 @@ header {
       display: table-cell;
       vertical-align: middle;
     }
+    .countdown {
+      font-size: 18px;
+      > span:first-child {
+        font-size: 24px;
+      }
+      > div {
+        background-color: #208bc9;
+        margin-bottom: 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      h1 {
+        background: none;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+        color: #fff;
+        font-size: 32px;
+        font-weight: 100;
+        line-height: 1.2;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        @media (min-width: @screen-xs) {
+          font-size: 40px;
+        }
+        @media (min-width: @screen-sm) {
+          font-size: 52px;
+        }
+      }
+    }
     .description {
       margin: 46px auto 40px;
       position: relative;
@@ -434,11 +465,19 @@ header {
     }
     img {
       width: 160px;
+/*
       @media (min-width: @screen-xs) {
         width: 220px;
       }
       @media (min-width: @screen-sm) {
         width: 320px;
+      }
+*/
+      @media (min-width: @screen-xs) {
+        width: 125px;
+      }
+      @media (min-width: @screen-sm) {
+        width: 225px;
       }
     }
     .splash {
