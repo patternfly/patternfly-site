@@ -353,7 +353,7 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
   background-size: 40% auto, 40% auto, 60% auto, auto;
   color: #e4e4e4;
   margin: 0;
-  padding: 100px 0 110px;
+  padding: 70px 0 90px;
   position: relative;
   text-align: center;
 }
@@ -402,13 +402,13 @@ header .navbar.navbar-default .navbar-toggle:hover .icon-bar {
 }
 .home .jumbotron .countdown {
   font-size: 18px;
+  margin-bottom: 20px;
 }
 .home .jumbotron .countdown > span:first-child {
   font-size: 24px;
 }
 .home .jumbotron .countdown > div {
   background-color: #208bc9;
-  margin-bottom: 20px;
   margin-left: -20px;
   margin-right: -20px;
 }
